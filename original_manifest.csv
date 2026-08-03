@@ -1,0 +1,4 @@
+file,dataverse_file_id,file_persistent_id,bytes,md5_served,md5_published,unf,served_as
+README.txt,28397,,519,cce242d8c4e2420c00dca19e057731e1,cce242d8c4e2420c00dca19e057731e1,,README.txt
+shy_trump_analysis.r,28400,,11439,a6efb681cf4faee6fda3b17a0b777649,a6efb681cf4faee6fda3b17a0b777649,,shy_trump_analysis.r
+shy_trump_cleaned.csv,28399,,481797,fc95107545870a28858ebb267f902cfb,fc95107545870a28858ebb267f902cfb,UNF:6:JB5esAPHbydKlYKwcc1Aaw==,shy_trump_cleaned.tab

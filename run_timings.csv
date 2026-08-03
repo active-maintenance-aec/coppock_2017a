@@ -1,0 +1,12 @@
+step,minutes
+download_original.R,0.009960269927978516
+maintained/clean_trump.R,0.016474548975626627
+maintained/table_2_list_response_distribution.R,8.340517679850261e-4
+maintained/figure_1_direct_vs_list_estimates.R,10.271834782759349
+maintained/table_a1_subgroup_estimates.R,4.1983524958292645e-4
+maintained/text_main_estimates.R,0.05143579641977946
+maintained/text_descriptive_claims.R,4.1626691818237306e-4
+ground_truth/run_original_archive.R,24.09606806834539
+ground_truth/build_ground_truth.R,0.0021160324414571125
+maintained/in_text_claims.R,3.9388338724772134e-4
+download_original.R (re-verify),2.1065076192220051e-4

@@ -1,0 +1,9 @@
+run,kind,cells,matching_published,mean_abs_difference_pp,max_abs_difference_pp
+"Deposited script, 2,000 replicates",estimate,120,120,0.025594821593802063,0.04946601767695202
+"Deposited script, 2,000 replicates, pre-3.6.0 sampler",estimate,120,120,0.025594821593802063,0.04946601767695202
+"Deposited script, 200 replicates as shipped",estimate,120,120,0.025594821593802063,0.04946601767695202
+Maintained rewrite,estimate,120,120,0.025594821593802063,0.04946601767695202
+"Deposited script, 2,000 replicates",standard error,120,39,0.12978189343963234,1.3355137003423465
+"Deposited script, 2,000 replicates, pre-3.6.0 sampler",standard error,120,44,0.26420713914688415,2.0471020937733075
+"Deposited script, 200 replicates as shipped",standard error,120,37,0.2574812572704873,1.600823379391331
+Maintained rewrite,standard error,120,39,0.12978189343963234,1.3355137003423465

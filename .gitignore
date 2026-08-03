@@ -1,0 +1,23 @@
+# The deposited archive is fetched from the Yale Dataverse by download_original.R,
+# not redistributed.
+original/
+
+# trump.rds is the deposited respondent-level file serialised, with nothing
+# recoded, added or dropped. Committing it would redistribute the deposit through
+# the back door, so it is rebuilt from original/ by maintained/clean_trump.R.
+maintained/output/trump.rds
+
+# Working log stays private, per the house rule for public repos.
+notes.md
+
+# Quarto build artifacts
+/.quarto/
+*_files/
+report/maintained/
+
+# RStudio project state
+.Rproj.user/
+
+**/*.quarto_ipynb
+
+.DS_Store

@@ -1,0 +1,6 @@
+income_quintile,min_income,max_income,n
+Below 20th Income Percentile,1,4,804
+20th - 40th Income Percentile,5,8,1038
+40th - 60th Income Percentile,9,14,1361
+60th - 80th Income Percentile,15,18,936
+Above 80th Income Percentile,19,24,1151

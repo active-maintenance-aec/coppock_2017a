@@ -1,0 +1,402 @@
+claim_id,location,claim_type,value_paper
+abstract_n_respondents,Abstract,pipeline,5290
+abstract_field_dates,Abstract,structural,
+abstract_direct_share,Abstract,pipeline,32.5
+abstract_list_estimate,Abstract,pipeline,29.6
+desc_list_below_direct,Abstract,descriptive,
+intro_wisconsin_forecast_clinton,Introduction,transcribed,49.6
+intro_wisconsin_forecast_trump,Introduction,transcribed,44.3
+intro_wisconsin_actual_clinton,Introduction,transcribed,46.5
+intro_wisconsin_actual_trump,Introduction,transcribed,47.2
+intro_wisconsin_error,Introduction,transcribed,6
+intro_michigan_error,Introduction,transcribed,4.5
+intro_pennsylvania_error,Introduction,transcribed,4.4
+intro_popular_vote_actual_clinton,Introduction,transcribed,48.0
+intro_popular_vote_actual_trump,Introduction,transcribed,45.9
+intro_popular_vote_forecast_clinton,Introduction,transcribed,48.5
+intro_popular_vote_forecast_trump,Introduction,transcribed,44.9
+intro_dropp_mode_gap,Introduction,transcribed,6
+design_n_respondents,Design,pipeline,5290
+design_field_dates,Design,structural,
+design_direct_share_trump,Design,pipeline,32.5
+design_direct_share_clinton,Design,pipeline,37.0
+design_direct_share_other,Design,pipeline,30.5
+design_direct_share_restated,Design,pipeline,32.5
+design_minimum_wage_item,Table 1,definitional,15
+design_list_lengths,Design,definitional,
+results_list_mean_control,Results,pipeline,1.548
+results_list_mean_treatment,Results,pipeline,1.843
+results_list_ate_proportion,Results,pipeline,0.296
+results_list_ate_percent,Results,pipeline,29.6
+results_direct_share_restated,Results,pipeline,32.5
+results_direct_minus_list,Results,pipeline,2.9
+results_direct_minus_list_se,Results,pipeline,3.4
+desc_direct_minus_list_not_significant,Results,descriptive,
+results_share_not_reporting_trump,Results,pipeline,67.5
+results_nondiscloser_mean_control,Results,pipeline,1.610
+results_nondiscloser_mean_treatment,Results,pipeline,1.642
+results_nondiscloser_list_ate,Results,pipeline,3.3
+desc_nondiscloser_not_significant,Results,descriptive,
+results_adjusted_range,Results,definitional,
+results_party_id_points,Equation 1,pipeline,7
+results_income_points,Equation 1,pipeline,22
+results_interval_level,Results,definitional,95
+desc_party_gradient,Results,descriptive,
+desc_education_gradient,Results,descriptive,
+desc_less_than_high_school_smallest,Results,descriptive,
+desc_income_groups_similar,Results,descriptive,
+desc_gender_similar,Results,descriptive,
+desc_white_highest,Results,descriptive,
+desc_likely_voters_higher,Results,descriptive,
+desc_unadjusted_mostly_cover_zero,Results,descriptive,
+desc_adjusted_intervals_shrink,Results,descriptive,
+desc_adjusted_all_but_one,Results,descriptive,
+results_n_subgroups,Results,pipeline,25
+combined_estimate,Combined Estimate,pipeline,34.8
+combined_estimate_se,Combined Estimate,pipeline,2.9
+combined_minus_direct,Combined Estimate,pipeline,2.2
+combined_minus_direct_se,Combined Estimate,pipeline,2.9
+desc_combined_not_significant,Combined Estimate,descriptive,
+combined_null_value,Combined Estimate,definitional,1
+placebo_estimate,Combined Estimate,pipeline,85.7
+placebo_estimate_se,Combined Estimate,pipeline,5.6
+placebo_null_value,Combined Estimate,definitional,100
+placebo_p_value,Combined Estimate,pipeline,0.01
+figure_1_axis_range,Figure 1,structural,
+table_2_control_list_0_items,Table 2,pipeline,0.11
+table_2_control_list_1_item,Table 2,pipeline,0.37
+table_2_control_list_2_items,Table 2,pipeline,0.40
+table_2_control_list_3_items,Table 2,pipeline,0.13
+table_2_control_list_4_items,Table 2,pipeline,
+table_2_treatment_list_0_items,Table 2,pipeline,0.11
+table_2_treatment_list_1_item,Table 2,pipeline,0.22
+table_2_treatment_list_2_items,Table 2,pipeline,0.46
+table_2_treatment_list_3_items,Table 2,pipeline,0.15
+table_2_treatment_list_4_items,Table 2,pipeline,0.06
+table_2_control_list_n,Table 2,pipeline,2645
+table_2_treatment_list_n,Table 2,pipeline,2645
+table_a1_entire_sample_direct_est,Table A1,pipeline,32.5
+table_a1_entire_sample_direct_est_se,Table A1,pipeline,0.8
+table_a1_entire_sample_list_est,Table A1,pipeline,29.6
+table_a1_entire_sample_list_est_se,Table A1,pipeline,3.4
+table_a1_entire_sample_difference,Table A1,pipeline,3.0
+table_a1_entire_sample_difference_se,Table A1,pipeline,3.4
+table_a1_entire_sample_direct_est_adj,Table A1,pipeline,33.6
+table_a1_entire_sample_direct_est_adj_se,Table A1,pipeline,0.7
+table_a1_entire_sample_list_est_adj,Table A1,pipeline,33.0
+table_a1_entire_sample_list_est_adj_se,Table A1,pipeline,2.6
+table_a1_entire_sample_difference_adj,Table A1,pipeline,0.6
+table_a1_entire_sample_difference_adj_se,Table A1,pipeline,2.6
+table_a1_strong_democrat_direct_est,Table A1,pipeline,4.5
+table_a1_strong_democrat_direct_est_se,Table A1,pipeline,0.8
+table_a1_strong_democrat_list_est,Table A1,pipeline,-4.3
+table_a1_strong_democrat_list_est_se,Table A1,pipeline,7.5
+table_a1_strong_democrat_difference,Table A1,pipeline,8.8
+table_a1_strong_democrat_difference_se,Table A1,pipeline,7.6
+table_a1_strong_democrat_direct_est_adj,Table A1,pipeline,5.0
+table_a1_strong_democrat_direct_est_adj_se,Table A1,pipeline,0.6
+table_a1_strong_democrat_list_est_adj,Table A1,pipeline,0.8
+table_a1_strong_democrat_list_est_adj_se,Table A1,pipeline,2.4
+table_a1_strong_democrat_difference_adj,Table A1,pipeline,4.2
+table_a1_strong_democrat_difference_adj_se,Table A1,pipeline,2.4
+table_a1_not_very_strong_democrat_direct_est,Table A1,pipeline,9.2
+table_a1_not_very_strong_democrat_direct_est_se,Table A1,pipeline,1.2
+table_a1_not_very_strong_democrat_list_est,Table A1,pipeline,5.0
+table_a1_not_very_strong_democrat_list_est_se,Table A1,pipeline,7.0
+table_a1_not_very_strong_democrat_difference,Table A1,pipeline,4.2
+table_a1_not_very_strong_democrat_difference_se,Table A1,pipeline,6.9
+table_a1_not_very_strong_democrat_direct_est_adj,Table A1,pipeline,8.0
+table_a1_not_very_strong_democrat_direct_est_adj_se,Table A1,pipeline,0.7
+table_a1_not_very_strong_democrat_list_est_adj,Table A1,pipeline,2.5
+table_a1_not_very_strong_democrat_list_est_adj_se,Table A1,pipeline,3.2
+table_a1_not_very_strong_democrat_difference_adj,Table A1,pipeline,5.5
+table_a1_not_very_strong_democrat_difference_adj_se,Table A1,pipeline,3.2
+table_a1_lean_democrat_direct_est,Table A1,pipeline,13.0
+table_a1_lean_democrat_direct_est_se,Table A1,pipeline,2.1
+table_a1_lean_democrat_list_est,Table A1,pipeline,8.4
+table_a1_lean_democrat_list_est_se,Table A1,pipeline,11.0
+table_a1_lean_democrat_difference,Table A1,pipeline,4.6
+table_a1_lean_democrat_difference_se,Table A1,pipeline,11.1
+table_a1_lean_democrat_direct_est_adj,Table A1,pipeline,13.0
+table_a1_lean_democrat_direct_est_adj_se,Table A1,pipeline,1.4
+table_a1_lean_democrat_list_est_adj,Table A1,pipeline,7.6
+table_a1_lean_democrat_list_est_adj_se,Table A1,pipeline,5.9
+table_a1_lean_democrat_difference_adj,Table A1,pipeline,5.5
+table_a1_lean_democrat_difference_adj_se,Table A1,pipeline,6.1
+table_a1_independent_direct_est,Table A1,pipeline,20.1
+table_a1_independent_direct_est_se,Table A1,pipeline,1.5
+table_a1_independent_list_est,Table A1,pipeline,24.3
+table_a1_independent_list_est_se,Table A1,pipeline,8.0
+table_a1_independent_difference,Table A1,pipeline,-4.2
+table_a1_independent_difference_se,Table A1,pipeline,8.1
+table_a1_independent_direct_est_adj,Table A1,pipeline,18.8
+table_a1_independent_direct_est_adj_se,Table A1,pipeline,1.4
+table_a1_independent_list_est_adj,Table A1,pipeline,26.5
+table_a1_independent_list_est_adj_se,Table A1,pipeline,6.9
+table_a1_independent_difference_adj,Table A1,pipeline,-7.7
+table_a1_independent_difference_adj_se,Table A1,pipeline,6.9
+table_a1_lean_republican_direct_est,Table A1,pipeline,73.4
+table_a1_lean_republican_direct_est_se,Table A1,pipeline,2.7
+table_a1_lean_republican_list_est,Table A1,pipeline,55.9
+table_a1_lean_republican_list_est_se,Table A1,pipeline,11.0
+table_a1_lean_republican_difference,Table A1,pipeline,17.6
+table_a1_lean_republican_difference_se,Table A1,pipeline,11.1
+table_a1_lean_republican_direct_est_adj,Table A1,pipeline,59.8
+table_a1_lean_republican_direct_est_adj_se,Table A1,pipeline,2.4
+table_a1_lean_republican_list_est_adj,Table A1,pipeline,48.5
+table_a1_lean_republican_list_est_adj_se,Table A1,pipeline,12.5
+table_a1_lean_republican_difference_adj,Table A1,pipeline,11.3
+table_a1_lean_republican_difference_adj_se,Table A1,pipeline,12.3
+table_a1_not_very_strong_republican_direct_est,Table A1,pipeline,68.1
+table_a1_not_very_strong_republican_direct_est_se,Table A1,pipeline,1.9
+table_a1_not_very_strong_republican_list_est,Table A1,pipeline,72.1
+table_a1_not_very_strong_republican_list_est_se,Table A1,pipeline,8.2
+table_a1_not_very_strong_republican_difference,Table A1,pipeline,-4.0
+table_a1_not_very_strong_republican_difference_se,Table A1,pipeline,8.0
+table_a1_not_very_strong_republican_direct_est_adj,Table A1,pipeline,72.4
+table_a1_not_very_strong_republican_direct_est_adj_se,Table A1,pipeline,1.3
+table_a1_not_very_strong_republican_list_est_adj,Table A1,pipeline,73.2
+table_a1_not_very_strong_republican_list_est_adj_se,Table A1,pipeline,6.9
+table_a1_not_very_strong_republican_difference_adj,Table A1,pipeline,-0.8
+table_a1_not_very_strong_republican_difference_adj_se,Table A1,pipeline,6.9
+table_a1_strong_republican_direct_est,Table A1,pipeline,90.4
+table_a1_strong_republican_direct_est_se,Table A1,pipeline,1.3
+table_a1_strong_republican_list_est,Table A1,pipeline,80.5
+table_a1_strong_republican_list_est_se,Table A1,pipeline,9.7
+table_a1_strong_republican_difference,Table A1,pipeline,9.9
+table_a1_strong_republican_difference_se,Table A1,pipeline,9.7
+table_a1_strong_republican_direct_est_adj,Table A1,pipeline,84.1
+table_a1_strong_republican_direct_est_adj_se,Table A1,pipeline,1.3
+table_a1_strong_republican_list_est_adj,Table A1,pipeline,89.6
+table_a1_strong_republican_list_est_adj_se,Table A1,pipeline,6.5
+table_a1_strong_republican_difference_adj,Table A1,pipeline,-5.5
+table_a1_strong_republican_difference_adj_se,Table A1,pipeline,6.6
+table_a1_less_than_high_school_direct_est,Table A1,pipeline,30.7
+table_a1_less_than_high_school_direct_est_se,Table A1,pipeline,4.2
+table_a1_less_than_high_school_list_est,Table A1,pipeline,-4.3
+table_a1_less_than_high_school_list_est_se,Table A1,pipeline,18.4
+table_a1_less_than_high_school_difference,Table A1,pipeline,35.1
+table_a1_less_than_high_school_difference_se,Table A1,pipeline,18.4
+table_a1_less_than_high_school_direct_est_adj,Table A1,pipeline,33.6
+table_a1_less_than_high_school_direct_est_adj_se,Table A1,pipeline,4.2
+table_a1_less_than_high_school_list_est_adj,Table A1,pipeline,15.3
+table_a1_less_than_high_school_list_est_adj_se,Table A1,pipeline,9.1
+table_a1_less_than_high_school_difference_adj,Table A1,pipeline,18.3
+table_a1_less_than_high_school_difference_adj_se,Table A1,pipeline,9.7
+table_a1_high_school_or_some_college_direct_est,Table A1,pipeline,34.4
+table_a1_high_school_or_some_college_direct_est_se,Table A1,pipeline,1.1
+table_a1_high_school_or_some_college_list_est,Table A1,pipeline,35.8
+table_a1_high_school_or_some_college_list_est_se,Table A1,pipeline,4.7
+table_a1_high_school_or_some_college_difference,Table A1,pipeline,-1.4
+table_a1_high_school_or_some_college_difference_se,Table A1,pipeline,4.6
+table_a1_high_school_or_some_college_direct_est_adj,Table A1,pipeline,36.2
+table_a1_high_school_or_some_college_direct_est_adj_se,Table A1,pipeline,1.0
+table_a1_high_school_or_some_college_list_est_adj,Table A1,pipeline,36.7
+table_a1_high_school_or_some_college_list_est_adj_se,Table A1,pipeline,4.2
+table_a1_high_school_or_some_college_difference_adj,Table A1,pipeline,-0.5
+table_a1_high_school_or_some_college_difference_adj_se,Table A1,pipeline,4.2
+table_a1_college_direct_est,Table A1,pipeline,30.1
+table_a1_college_direct_est_se,Table A1,pipeline,1.4
+table_a1_college_list_est,Table A1,pipeline,27.4
+table_a1_college_list_est_se,Table A1,pipeline,5.0
+table_a1_college_difference,Table A1,pipeline,2.7
+table_a1_college_difference_se,Table A1,pipeline,5.0
+table_a1_college_direct_est_adj,Table A1,pipeline,32.5
+table_a1_college_direct_est_adj_se,Table A1,pipeline,1.3
+table_a1_college_list_est_adj,Table A1,pipeline,35.5
+table_a1_college_list_est_adj_se,Table A1,pipeline,4.7
+table_a1_college_difference_adj,Table A1,pipeline,-3.0
+table_a1_college_difference_adj_se,Table A1,pipeline,4.6
+table_a1_graduate_school_direct_est,Table A1,pipeline,25.8
+table_a1_graduate_school_direct_est_se,Table A1,pipeline,1.7
+table_a1_graduate_school_list_est,Table A1,pipeline,10.9
+table_a1_graduate_school_list_est_se,Table A1,pipeline,6.7
+table_a1_graduate_school_difference,Table A1,pipeline,14.9
+table_a1_graduate_school_difference_se,Table A1,pipeline,6.5
+table_a1_graduate_school_direct_est_adj,Table A1,pipeline,27.1
+table_a1_graduate_school_direct_est_adj_se,Table A1,pipeline,1.6
+table_a1_graduate_school_list_est_adj,Table A1,pipeline,20.5
+table_a1_graduate_school_list_est_adj_se,Table A1,pipeline,4.7
+table_a1_graduate_school_difference_adj,Table A1,pipeline,6.6
+table_a1_graduate_school_difference_adj_se,Table A1,pipeline,4.5
+table_a1_below_20th_income_percentile_direct_est,Table A1,pipeline,30.7
+table_a1_below_20th_income_percentile_direct_est_se,Table A1,pipeline,1.8
+table_a1_below_20th_income_percentile_list_est,Table A1,pipeline,15.6
+table_a1_below_20th_income_percentile_list_est_se,Table A1,pipeline,8.2
+table_a1_below_20th_income_percentile_difference,Table A1,pipeline,15.1
+table_a1_below_20th_income_percentile_difference_se,Table A1,pipeline,7.8
+table_a1_below_20th_income_percentile_direct_est_adj,Table A1,pipeline,33.3
+table_a1_below_20th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.2
+table_a1_below_20th_income_percentile_list_est_adj,Table A1,pipeline,31.0
+table_a1_below_20th_income_percentile_list_est_adj_se,Table A1,pipeline,4.0
+table_a1_below_20th_income_percentile_difference_adj,Table A1,pipeline,2.4
+table_a1_below_20th_income_percentile_difference_adj_se,Table A1,pipeline,3.9
+table_a1_20th40th_income_percentile_direct_est,Table A1,pipeline,36.6
+table_a1_20th40th_income_percentile_direct_est_se,Table A1,pipeline,1.7
+table_a1_20th40th_income_percentile_list_est,Table A1,pipeline,38.4
+table_a1_20th40th_income_percentile_list_est_se,Table A1,pipeline,6.3
+table_a1_20th40th_income_percentile_difference,Table A1,pipeline,-1.8
+table_a1_20th40th_income_percentile_difference_se,Table A1,pipeline,6.2
+table_a1_20th40th_income_percentile_direct_est_adj,Table A1,pipeline,35.6
+table_a1_20th40th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.1
+table_a1_20th40th_income_percentile_list_est_adj,Table A1,pipeline,34.6
+table_a1_20th40th_income_percentile_list_est_adj_se,Table A1,pipeline,2.8
+table_a1_20th40th_income_percentile_difference_adj,Table A1,pipeline,0.9
+table_a1_20th40th_income_percentile_difference_adj_se,Table A1,pipeline,2.7
+table_a1_40th60th_income_percentile_direct_est,Table A1,pipeline,34.0
+table_a1_40th60th_income_percentile_direct_est_se,Table A1,pipeline,2.1
+table_a1_40th60th_income_percentile_list_est,Table A1,pipeline,19.7
+table_a1_40th60th_income_percentile_list_est_se,Table A1,pipeline,7.3
+table_a1_40th60th_income_percentile_difference,Table A1,pipeline,14.3
+table_a1_40th60th_income_percentile_difference_se,Table A1,pipeline,7.3
+table_a1_40th60th_income_percentile_direct_est_adj,Table A1,pipeline,34.0
+table_a1_40th60th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.3
+table_a1_40th60th_income_percentile_list_est_adj,Table A1,pipeline,34.8
+table_a1_40th60th_income_percentile_list_est_adj_se,Table A1,pipeline,3.3
+table_a1_40th60th_income_percentile_difference_adj,Table A1,pipeline,-0.8
+table_a1_40th60th_income_percentile_difference_adj_se,Table A1,pipeline,3.1
+table_a1_60th80th_income_percentile_direct_est,Table A1,pipeline,33.9
+table_a1_60th80th_income_percentile_direct_est_se,Table A1,pipeline,1.8
+table_a1_60th80th_income_percentile_list_est,Table A1,pipeline,40.7
+table_a1_60th80th_income_percentile_list_est_se,Table A1,pipeline,7.4
+table_a1_60th80th_income_percentile_difference,Table A1,pipeline,-6.8
+table_a1_60th80th_income_percentile_difference_se,Table A1,pipeline,7.4
+table_a1_60th80th_income_percentile_direct_est_adj,Table A1,pipeline,35.4
+table_a1_60th80th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.4
+table_a1_60th80th_income_percentile_list_est_adj,Table A1,pipeline,39.7
+table_a1_60th80th_income_percentile_list_est_adj_se,Table A1,pipeline,5.0
+table_a1_60th80th_income_percentile_difference_adj,Table A1,pipeline,-4.3
+table_a1_60th80th_income_percentile_difference_adj_se,Table A1,pipeline,4.9
+table_a1_above_80th_income_percentile_direct_est,Table A1,pipeline,27.2
+table_a1_above_80th_income_percentile_direct_est_se,Table A1,pipeline,2.0
+table_a1_above_80th_income_percentile_list_est,Table A1,pipeline,30.5
+table_a1_above_80th_income_percentile_list_est_se,Table A1,pipeline,8.8
+table_a1_above_80th_income_percentile_difference,Table A1,pipeline,-3.4
+table_a1_above_80th_income_percentile_difference_se,Table A1,pipeline,9.0
+table_a1_above_80th_income_percentile_direct_est_adj,Table A1,pipeline,27.5
+table_a1_above_80th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.4
+table_a1_above_80th_income_percentile_list_est_adj,Table A1,pipeline,21.4
+table_a1_above_80th_income_percentile_list_est_adj_se,Table A1,pipeline,4.7
+table_a1_above_80th_income_percentile_difference_adj,Table A1,pipeline,6.1
+table_a1_above_80th_income_percentile_difference_adj_se,Table A1,pipeline,4.7
+table_a1_men_direct_est,Table A1,pipeline,36.9
+table_a1_men_direct_est_se,Table A1,pipeline,1.3
+table_a1_men_list_est,Table A1,pipeline,33.5
+table_a1_men_list_est_se,Table A1,pipeline,5.3
+table_a1_men_difference,Table A1,pipeline,3.5
+table_a1_men_difference_se,Table A1,pipeline,5.2
+table_a1_men_direct_est_adj,Table A1,pipeline,38.0
+table_a1_men_direct_est_adj_se,Table A1,pipeline,1.1
+table_a1_men_list_est_adj,Table A1,pipeline,33.5
+table_a1_men_list_est_adj_se,Table A1,pipeline,3.7
+table_a1_men_difference_adj,Table A1,pipeline,4.5
+table_a1_men_difference_adj_se,Table A1,pipeline,3.7
+table_a1_women_direct_est,Table A1,pipeline,28.4
+table_a1_women_direct_est_se,Table A1,pipeline,1.1
+table_a1_women_list_est,Table A1,pipeline,26.4
+table_a1_women_list_est_se,Table A1,pipeline,4.4
+table_a1_women_difference,Table A1,pipeline,2.0
+table_a1_women_difference_se,Table A1,pipeline,4.5
+table_a1_women_direct_est_adj,Table A1,pipeline,30.1
+table_a1_women_direct_est_adj_se,Table A1,pipeline,1.0
+table_a1_women_list_est_adj,Table A1,pipeline,32.7
+table_a1_women_list_est_adj_se,Table A1,pipeline,4.6
+table_a1_women_difference_adj,Table A1,pipeline,-2.6
+table_a1_women_difference_adj_se,Table A1,pipeline,4.6
+table_a1_white_direct_est,Table A1,pipeline,39.4
+table_a1_white_direct_est_se,Table A1,pipeline,1.1
+table_a1_white_list_est,Table A1,pipeline,38.0
+table_a1_white_list_est_se,Table A1,pipeline,4.1
+table_a1_white_difference,Table A1,pipeline,1.4
+table_a1_white_difference_se,Table A1,pipeline,4.1
+table_a1_white_direct_est_adj,Table A1,pipeline,39.9
+table_a1_white_direct_est_adj_se,Table A1,pipeline,0.9
+table_a1_white_list_est_adj,Table A1,pipeline,40.5
+table_a1_white_list_est_adj_se,Table A1,pipeline,3.3
+table_a1_white_difference_adj,Table A1,pipeline,-0.6
+table_a1_white_difference_adj_se,Table A1,pipeline,3.3
+table_a1_black_direct_est,Table A1,pipeline,10.3
+table_a1_black_direct_est_se,Table A1,pipeline,1.7
+table_a1_black_list_est,Table A1,pipeline,16.6
+table_a1_black_list_est_se,Table A1,pipeline,10.9
+table_a1_black_difference,Table A1,pipeline,-6.3
+table_a1_black_difference_se,Table A1,pipeline,11.0
+table_a1_black_direct_est_adj,Table A1,pipeline,11.2
+table_a1_black_direct_est_adj_se,Table A1,pipeline,1.7
+table_a1_black_list_est_adj,Table A1,pipeline,22.0
+table_a1_black_list_est_adj_se,Table A1,pipeline,9.0
+table_a1_black_difference_adj,Table A1,pipeline,-10.7
+table_a1_black_difference_adj_se,Table A1,pipeline,9.0
+table_a1_hispanic_direct_est,Table A1,pipeline,24.4
+table_a1_hispanic_direct_est_se,Table A1,pipeline,2.0
+table_a1_hispanic_list_est,Table A1,pipeline,2.8
+table_a1_hispanic_list_est_se,Table A1,pipeline,9.7
+table_a1_hispanic_difference,Table A1,pipeline,21.6
+table_a1_hispanic_difference_se,Table A1,pipeline,9.4
+table_a1_hispanic_direct_est_adj,Table A1,pipeline,26.2
+table_a1_hispanic_direct_est_adj_se,Table A1,pipeline,1.9
+table_a1_hispanic_list_est_adj,Table A1,pipeline,9.0
+table_a1_hispanic_list_est_adj_se,Table A1,pipeline,5.5
+table_a1_hispanic_difference_adj,Table A1,pipeline,17.2
+table_a1_hispanic_difference_adj_se,Table A1,pipeline,5.4
+table_a1_other_race_direct_est,Table A1,pipeline,20.3
+table_a1_other_race_direct_est_se,Table A1,pipeline,2.2
+table_a1_other_race_list_est,Table A1,pipeline,24.0
+table_a1_other_race_list_est_se,Table A1,pipeline,11.6
+table_a1_other_race_difference,Table A1,pipeline,-3.8
+table_a1_other_race_difference_se,Table A1,pipeline,11.2
+table_a1_other_race_direct_est_adj,Table A1,pipeline,20.7
+table_a1_other_race_direct_est_adj_se,Table A1,pipeline,2.2
+table_a1_other_race_list_est_adj,Table A1,pipeline,28.5
+table_a1_other_race_list_est_adj_se,Table A1,pipeline,10.1
+table_a1_other_race_difference_adj,Table A1,pipeline,-7.8
+table_a1_other_race_difference_adj_se,Table A1,pipeline,10.0
+table_a1_unlikely_voter_direct_est,Table A1,pipeline,24.2
+table_a1_unlikely_voter_direct_est_se,Table A1,pipeline,1.4
+table_a1_unlikely_voter_list_est,Table A1,pipeline,20.7
+table_a1_unlikely_voter_list_est_se,Table A1,pipeline,7.1
+table_a1_unlikely_voter_difference,Table A1,pipeline,3.5
+table_a1_unlikely_voter_difference_se,Table A1,pipeline,7.1
+table_a1_unlikely_voter_direct_est_adj,Table A1,pipeline,24.3
+table_a1_unlikely_voter_direct_est_adj_se,Table A1,pipeline,1.3
+table_a1_unlikely_voter_list_est_adj,Table A1,pipeline,24.9
+table_a1_unlikely_voter_list_est_adj_se,Table A1,pipeline,5.9
+table_a1_unlikely_voter_difference_adj,Table A1,pipeline,-0.5
+table_a1_unlikely_voter_difference_adj_se,Table A1,pipeline,5.9
+table_a1_likely_voter_direct_est,Table A1,pipeline,36.5
+table_a1_likely_voter_direct_est_se,Table A1,pipeline,1.0
+table_a1_likely_voter_list_est,Table A1,pipeline,33.6
+table_a1_likely_voter_list_est_se,Table A1,pipeline,3.7
+table_a1_likely_voter_difference,Table A1,pipeline,2.9
+table_a1_likely_voter_difference_se,Table A1,pipeline,3.7
+table_a1_likely_voter_direct_est_adj,Table A1,pipeline,37.0
+table_a1_likely_voter_direct_est_adj_se,Table A1,pipeline,0.9
+table_a1_likely_voter_list_est_adj,Table A1,pipeline,36.0
+table_a1_likely_voter_list_est_adj_se,Table A1,pipeline,2.9
+table_a1_likely_voter_difference_adj,Table A1,pipeline,1.0
+table_a1_likely_voter_difference_adj_se,Table A1,pipeline,2.8
+table_a1_entire_sample_n,Table A1,pipeline,5290
+table_a1_strong_democrat_n,Table A1,pipeline,726
+table_a1_not_very_strong_democrat_n,Table A1,pipeline,1140
+table_a1_lean_democrat_n,Table A1,pipeline,409
+table_a1_independent_n,Table A1,pipeline,1131
+table_a1_lean_republican_n,Table A1,pipeline,351
+table_a1_not_very_strong_republican_n,Table A1,pipeline,990
+table_a1_strong_republican_n,Table A1,pipeline,543
+table_a1_less_than_high_school_n,Table A1,pipeline,157
+table_a1_high_school_or_some_college_n,Table A1,pipeline,2793
+table_a1_college_n,Table A1,pipeline,1465
+table_a1_graduate_school_n,Table A1,pipeline,875
+table_a1_below_20th_income_percentile_n,Table A1,pipeline,1038
+table_a1_20th40th_income_percentile_n,Table A1,pipeline,1361
+table_a1_40th60th_income_percentile_n,Table A1,pipeline,936
+table_a1_60th80th_income_percentile_n,Table A1,pipeline,1151
+table_a1_above_80th_income_percentile_n,Table A1,pipeline,804
+table_a1_men_n,Table A1,pipeline,2332
+table_a1_women_n,Table A1,pipeline,2958
+table_a1_white_n,Table A1,pipeline,3544
+table_a1_black_n,Table A1,pipeline,446
+table_a1_hispanic_n,Table A1,pipeline,804
+table_a1_other_race_n,Table A1,pipeline,496
+table_a1_unlikely_voter_n,Table A1,pipeline,1420
+table_a1_likely_voter_n,Table A1,pipeline,3870
