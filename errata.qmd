@@ -22,6 +22,13 @@ txt <- read_csv(here("maintained", "output", "text_main_estimates.csv"),
 
 entire <- function(which, col = "est") fig[[col]][fig$estimator == which]
 text_val <- function(label) txt$estimate[txt$quantity == label]
+
+# Entry 5 reads the quintile sizes the rewrite checks on every run, so the note's two
+# counts are computed rather than typed.
+income <- read_csv(here("maintained", "output", "income_quintile_check.csv"),
+                   show_col_types = FALSE)
+income_n <- function(q) income$n[income$income_quintile == q]
+comma <- function(x) format(x, big.mark = ",", trim = TRUE)
 ```
 
 ```{r entries}
@@ -77,7 +84,30 @@ entries <- tribble(
   str_glue(
     "The published figure is 100 minus the two rounded shares. The three remaining response ",
     "categories carry {sprintf('%.1f', 100 * text_val('direct_share_other'))} per cent of ",
-    "the weight.")
+    "the weight."),
+
+  5, "label", "pipeline", "full",
+  "The income quintile rows of Figure 1 and Table A1 carry each other's labels",
+  "published Figure 1 and Table A1",
+  "[[Below 20th income percentile]], [[20th-40th income percentile]], [[40th-60th income percentile]], [[60th-80th income percentile]], [[Above 80th income percentile]]",
+  "[[20th-40th income percentile]], [[40th-60th income percentile]], [[60th-80th income percentile]], [[Above 80th income percentile]], [[Below 20th income percentile]]",
+  str_glue(
+    "The deposited script builds the grouping factor with its levels typed in alphabetical ",
+    "order and its labels typed in substantive order, so each income row is printed under ",
+    "the label belonging to the group before it and the lowest quintile is printed as the ",
+    "highest. Every other block in the same call lines up, because only the income levels ",
+    "sort differently under the two orders. The direction is not a matter of interpretation: ",
+    "income_quintile is a self-describing character variable whose five categories partition ",
+    "the deposited household income measure, and the row the article prints as the bottom ",
+    "quintile reports N = {comma(income_n('20th - 40th Income Percentile'))}, which is the ",
+    "size of the second quintile; the bottom quintile has ",
+    "{comma(income_n('Below 20th Income Percentile'))}.",
+    "\n\n",
+    "The changed artifact is the five labels alone. No estimate, standard error or sample ",
+    "size moves, and no conclusion turns on it: the article's claim about income is that the ",
+    "groups did not diverge widely, which holds under either labelling. The maintained ",
+    "rewrite prints the labels the data supports, which is why its income rows disagree with ",
+    "the published ones in the ground truth.")
 ) |>
   mutate(across(c(title, published, corrected, note), as.character))
 
@@ -91,7 +121,7 @@ n_entries_word <- c("one", "two", "three", "four", "five", "six", "seven", "eigh
 bold <- function(x) str_replace_all(x, "\\[\\[(.*?)\\]\\]", "**\\1**")
 ```
 
-This note lists `r n_entries_word` misstated numbers in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who quoted the sentence would be quoting a number the paper's own data do not support. The first two are substantive; the last two arise from rounding before subtracting, and are noted for completeness.
+This note lists `r n_entries_word` errors in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who took the page at its word would be taking away something the paper's own data do not support. Entries 1 to 4 are misstated numbers: the first two substantive, the next two arising from rounding before subtracting and noted for completeness. Entry 5 is not a number at all but a set of labels, and it is the one entry that reaches a figure and a table rather than a sentence.
 
 Every corrected value below is computed from the deposited data at the time this document is rendered. The code and output supporting each correction are at [github.com/active-maintenance-aec/coppock_2017a](https://github.com/active-maintenance-aec/coppock_2017a).
 
