@@ -24,44 +24,90 @@ entire <- function(which, col = "est") fig[[col]][fig$estimator == which]
 text_val <- function(label) txt$estimate[txt$quantity == label]
 ```
 
-This note lists four misstated numbers in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who quoted the sentence would be quoting a number the paper's own data do not support. The first two are substantive; the last two arise from rounding before subtracting, and are noted for completeness.
+```{r entries}
+# THE ERRATA SPINE. Every entry is defined once, here, and rendered from this tibble into
+# this document and into the machine-readable errata_entries.csv written at the bottom of
+# the file, which is what any other document carrying these corrections reads. Before the
+# spine existed an entry was written out in prose wherever it was needed, and the copies
+# had already diverged.
+#
+# [[...]] marks the span that changes. Each renderer supplies its own markup for it: bold
+# here. Nothing else in a field is markup, so the same string can be set by any of them.
+#
+# Numbering is the published note's and is APPEND-ONLY: entry 2 can already have been cited,
+# so a later finding is added at the end and never interleaved.
+#
+# A published or corrected value that the pipeline computes stays computed: the field is
+# built with str_glue() so the number is produced when this document renders, not typed.
+entries <- tribble(
+  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note,
+
+  1, "definition", "pipeline", "full",
+  "Length of the income scale in Equation 1",
+  "published Equation 1",
+  "A brief justification of this specification: all variables except for 7-point Party ID and [[22-point]] Income are indicators, so not many modeling choices must be made.",
+  str_glue("A brief justification of this specification: all variables except for 7-point Party ID and [[{sprintf('%.0f', text_val('income_points'))}-point]] Income are indicators, so not many modeling choices must be made."),
+  str_glue(
+    "The deposited income variable takes {sprintf('%.0f', text_val('income_points'))} ",
+    "distinct values, 1 through {sprintf('%.0f', text_val('income_points'))}, with every ",
+    "value present, and the deposited script enters it as it stands."),
+
+  2, "quantity", "pipeline", "full",
+  "Standard error of the difference between the two estimates",
+  "published Combined Estimate",
+  "The bootstrapped standard error of this difference is [[3.4]] points, indicating that is not statistically significantly different from zero.",
+  str_glue("The bootstrapped standard error of this difference is [[{sprintf('%.1f', 100 * entire('Difference', 'se'))}]] points, indicating that is not statistically significantly different from zero."),
+  "",
+
+  3, "quantity", "pipeline", "full",
+  "Difference between the direct question and the list experiment",
+  "published Results",
+  "Recall that the direct question estimate of Trump support was 32.5%, for a [[2.9]] percentage points difference.",
+  str_glue("Recall that the direct question estimate of Trump support was 32.5%, for a [[{sprintf('%.1f', 100 * entire('Difference'))}]] percentage points difference."),
+  str_glue(
+    "The published figure is the difference of the two rounded shares. The rounded ",
+    "difference is {sprintf('%.1f', 100 * entire('Difference'))}, which is what Table A1 ",
+    "reports for the same quantity, so the article disagrees with its own appendix."),
+
+  4, "quantity", "pipeline", "full",
+  "Share reporting other, would not vote, or undecided",
+  "published Design",
+  "Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while [[30.5%]] reported that they would vote for other candidates, would not vote, or were still undecided.",
+  str_glue("Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while [[{sprintf('%.1f', 100 * text_val('direct_share_other'))}%]] reported that they would vote for other candidates, would not vote, or were still undecided."),
+  str_glue(
+    "The published figure is 100 minus the two rounded shares. The three remaining response ",
+    "categories carry {sprintf('%.1f', 100 * text_val('direct_share_other'))} per cent of ",
+    "the weight.")
+) |>
+  mutate(across(c(title, published, corrected, note), as.character))
+
+stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry))
+
+# The prose below counts the entries in words, as the note has always done.
+n_entries_word <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+                    "ten", "eleven", "twelve")[nrow(entries)]
+
+# The spine's markup, resolved for this document.
+bold <- function(x) str_replace_all(x, "\\[\\[(.*?)\\]\\]", "**\\1**")
+```
+
+This note lists `r n_entries_word` misstated numbers in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who quoted the sentence would be quoting a number the paper's own data do not support. The first two are substantive; the last two arise from rounding before subtracting, and are noted for completeness.
 
 Every corrected value below is computed from the deposited data at the time this document is rendered. The code and output supporting each correction are at [github.com/active-maintenance-aec/coppock_2017a](https://github.com/active-maintenance-aec/coppock_2017a).
 
-## 1. Length of the income scale in Equation 1
+```{r render-entries, results="asis"}
+# A heading is only a heading when a blank line precedes it, so every emitted entry opens
+# with one.
+walk(seq_len(nrow(entries)), function(i) {
+  e <- entries[i, ]
+  cat("\n\n## ", e$entry, ". ", e$title, "\n\n> ", bold(e$published),
+      "\n\nCorrected:\n\n> ", bold(e$corrected), "\n\n",
+      if (e$note != "") paste0(e$note, "\n") else "", sep = "")
+})
+```
 
-> A brief justification of this specification: all variables except for 7-point Party ID and **22-point** Income are indicators, so not many modeling choices must be made.
-
-Corrected:
-
-> A brief justification of this specification: all variables except for 7-point Party ID and **`r sprintf("%.0f", text_val("income_points"))`-point** Income are indicators, so not many modeling choices must be made.
-
-The deposited income variable takes `r sprintf("%.0f", text_val("income_points"))` distinct values, 1 through `r sprintf("%.0f", text_val("income_points"))`, with every value present, and the deposited script enters it as it stands.
-
-## 2. Standard error of the difference between the two estimates
-
-> The bootstrapped standard error of this difference is **3.4** points, indicating that is not statistically significantly different from zero.
-
-Corrected:
-
-> The bootstrapped standard error of this difference is **`r sprintf("%.1f", 100 * entire("Difference", "se"))`** points, indicating that is not statistically significantly different from zero.
-
-## 3. Difference between the direct question and the list experiment
-
-> Recall that the direct question estimate of Trump support was 32.5%, for a **2.9** percentage points difference.
-
-Corrected:
-
-> Recall that the direct question estimate of Trump support was 32.5%, for a **`r sprintf("%.1f", 100 * entire("Difference"))`** percentage points difference.
-
-The published figure is the difference of the two rounded shares. The rounded difference is `r sprintf("%.1f", 100 * entire("Difference"))`, which is what Table A1 reports for the same quantity, so the article disagrees with its own appendix.
-
-## 4. Share reporting other, would not vote, or undecided
-
-> Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while **30.5%** reported that they would vote for other candidates, would not vote, or were still undecided.
-
-Corrected:
-
-> Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while **`r sprintf("%.1f", 100 * text_val("direct_share_other"))`%** reported that they would vote for other candidates, would not vote, or were still undecided.
-
-The published figure is 100 minus the two rounded shares. The three remaining response categories carry `r sprintf("%.1f", 100 * text_val("direct_share_other"))` per cent of the weight.
+```{r emit-spine}
+# The machine-readable spine, written wherever this document is rendered. Anything else that
+# carries these corrections reads it rather than keeping its own copy, so the two cannot drift.
+write_csv(entries, here("errata_entries.csv"))
+```
