@@ -166,7 +166,54 @@ entries <- tribble(
     "groups did not diverge widely, which holds under either labelling. The maintained ",
     "rewrite prints the labels the data supports, which is why its income rows disagree with ",
     "the published ones in the ground truth."),
-  paste(income_label_claim_ids, collapse = ";")
+  paste(income_label_claim_ids, collapse = ";"),
+
+  6, "note", "reading", "brief",
+  "A misspelling in the note to Table A1",
+  "published, the note to Table A1",
+  "Adjusted [[direction]] question estimates are predictions from a logistic regression.",
+  "Adjusted [[direct]] question estimates are predictions from a logistic regression.",
+  str_glue(
+    "The column the note describes is headed Direct question, and every other mention of ",
+    "the estimator in the article and in the deposited script spells it that way. The ",
+    "misspelling is in the authors' own source as well as on the published page. It was ",
+    "found while setting Table A1 for the remastered edition, which reads a float cell by ",
+    "cell where the token gate drops its interior on both sides."),
+  "",
+
+  7, "wording", "reading", "full",
+  "A dropped word in the abstract",
+  "published Abstract",
+  "A list experiment conducted on the same respondents yields an [[estimate]] 29.6%",
+  "A list experiment conducted on the same respondents yields an [[estimate of]] 29.6%",
+  str_glue(
+    "The word is missing on the published page and in the deposited manuscript. The sentence ",
+    "has one reading with it and none without, so what is supplied is recoverable from the ",
+    "document rather than chosen for it. Found by reading the abstract against the published ",
+    "page while preparing the remastered edition."),
+  "",
+
+  8, "wording", "reading", "full",
+  "A dropped word in the Combined Estimate section",
+  "published Combined Estimate",
+  "we should discount the value [[the]] combined estimate",
+  "we should discount the value [[of the]] combined estimate",
+  str_glue(
+    "The same omission as entry 7 and the same reasoning: the sentence is about the value of ",
+    "the combined estimate, there is no second reading, and the word is absent from the ",
+    "published page rather than from this reading of it."),
+  "",
+
+  9, "typography", "reading", "brief",
+  "A narrative citation set without its parentheses",
+  "published Combined Estimate",
+  "Aronow et al. [[2015]] also propose a joint test",
+  "Aronow et al. [[(2015)]] also propose a joint test",
+  str_glue(
+    "Every other narrative citation in the article parenthesises its year: Blair and Imai ",
+    "(2012), Glynn (2013), Imai (2011), Dropp (2015). The authors' own source sets this one ",
+    "with the same macro as the others, so the parentheses were lost in typesetting."),
+  ""
 ) |>
   mutate(across(c(title, published, corrected, note), as.character))
 
@@ -192,7 +239,7 @@ n_entries_word <- c("one", "two", "three", "four", "five", "six", "seven", "eigh
 bold <- function(x) str_replace_all(x, "\\[\\[(.*?)\\]\\]", "**\\1**")
 ```
 
-This note lists `r n_entries_word` errors in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who took the page at its word would be taking away something the paper's own data do not support. Entries 1 to 4 are misstated numbers: the first two substantive, the next two arising from rounding before subtracting and noted for completeness. Entry 5 is not a number at all but a set of labels, and it is the one entry that reaches a figure and a table rather than a sentence.
+This note lists `r n_entries_word` errors in "Did Shy Trump Supporters Bias the 2016 Polls? Evidence from a Nationally-representative List Experiment," published in *Statistics, Politics and Policy* 8(1), doi [10.1515/spp-2016-0005](https://doi.org/10.1515/spp-2016-0005). **None of them changes a conclusion of the paper.** Each is recorded because a reader who took the page at its word would be taking away something the paper's own data do not support. Entries 1 to 4 are misstated numbers: the first two substantive, the next two arising from rounding before subtracting and noted for completeness. Entries 5 and 6 are not numbers at all and are the two that reach a figure and a table rather than a sentence: a set of row labels that carry each other's values, and a misspelling in the note under Table A1.
 
 Every corrected value below is computed from the deposited data at the time this document is rendered. The code and output supporting each correction are at [github.com/active-maintenance-aec/coppock_2017a](https://github.com/active-maintenance-aec/coppock_2017a).
 
