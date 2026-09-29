@@ -344,17 +344,17 @@ coppock_2017a,design_direct_share_trump,In-text,"Direct question, Trump support 
 coppock_2017a,design_direct_share_clinton,In-text,"Direct question, Clinton support (%)",37.014678635863056,37.0,1,37.014678635863056,1,NA,
 coppock_2017a,design_direct_share_other,In-text,"Direct question, other or undecided (%)",30.437543440889776,30.5,0,30.437543440889776,0,paper_internal,The article's 30.5 is 100 minus the two rounded shares. The three remaining response categories carry 30.4 per cent of the weight
 coppock_2017a,design_direct_share_restated,In-text,"Direct question, Trump support (%), restated in the design section",32.54777792324716,32.5,1,32.54777792324716,1,NA,
-coppock_2017a,results_list_mean_control,In-text,"List experiment, control group mean (items)",1.547512393428481,1.548,1,1.54751239342848,1,NA,
-coppock_2017a,results_list_mean_treatment,In-text,"List experiment, treatment group mean (items)",1.8432903471661424,1.843,1,1.8432903471661413,1,NA,
+coppock_2017a,results_list_mean_control,In-text,"List experiment, control group mean (items)",1.5475123934284771,1.548,1,1.54751239342848,1,NA,
+coppock_2017a,results_list_mean_treatment,In-text,"List experiment, treatment group mean (items)",1.8432903471661384,1.843,1,1.8432903471661413,1,NA,
 coppock_2017a,results_list_ate_proportion,In-text,List experiment estimate of Trump support (proportion),0.29577795373765986,0.296,1,0.29577795373765986,1,NA,
 coppock_2017a,results_list_ate_percent,In-text,List experiment estimate of Trump support (%),29.577795373765987,29.6,1,29.577795373765987,1,NA,
 coppock_2017a,results_direct_share_restated,In-text,"Direct question, Trump support (%), restated in the results section",32.54777792324716,32.5,1,32.54777792324716,1,NA,
 coppock_2017a,results_direct_minus_list,In-text,Direct minus list experiment (pp),2.969982549481153,2.9,0,2.969982549481153,0,paper_internal,"The article's sentence gives 2.9, the difference of the two rounded shares. Table A1 gives 3.0 for the same quantity, which is the rounded difference, and 3.0 is what both the deposited script and the rewrite produce"
 coppock_2017a,results_direct_minus_list_se,In-text,Bootstrap SE of direct minus list (pp),3.339364651016838,3.4,0,3.339364651016838,0,archive,Bootstrap standard error. The deposited resampling code postdates publication by two years and no configuration of it recovers the published value exactly
 coppock_2017a,results_share_not_reporting_trump,In-text,Share not reporting Trump support (%),67.45222207675283,67.5,1,67.45222207675283,1,NA,
-coppock_2017a,results_nondiscloser_mean_control,In-text,"Non-disclosers, control group mean (items)",1.6097646845912503,1.610,1,1.6097646845912517,1,NA,
+coppock_2017a,results_nondiscloser_mean_control,In-text,"Non-disclosers, control group mean (items)",1.6097646845912508,1.610,1,1.6097646845912517,1,NA,
 coppock_2017a,results_nondiscloser_mean_treatment,In-text,"Non-disclosers, treatment group mean (items)",1.6424854641576525,1.642,1,1.6424854641576534,1,NA,
-coppock_2017a,results_nondiscloser_list_ate,In-text,List experiment estimate among non-disclosers (%),3.272077956640164,3.3,1,3.272077956640164,1,NA,
+coppock_2017a,results_nondiscloser_list_ate,In-text,List experiment estimate among non-disclosers (%),3.2720779566401617,3.3,1,3.2720779566401617,1,NA,
 coppock_2017a,results_n_subgroups,In-text,Subgroups compared,25,25,1,25,1,NA,The article calls these 25 opportunities to find a difference
 coppock_2017a,results_party_id_points,In-text,Points on the party identification scale entering the response model,NA,7,NA,7,1,NA,"Equation 1 calls the party identification term a 7-point measure, and the deposited pid_7 takes exactly seven values. The deposited script does not print this quantity"
 coppock_2017a,results_income_points,In-text,Points on the income scale entering the response model,NA,22,NA,24,0,paper_internal,"Equation 1 calls USHHI2 a 22-point income measure. The deposited variable takes 24 distinct values, 1 to 24, with every value present. The deposited script does not print this quantity, so there is nothing to read from the archive run"
@@ -362,12 +362,12 @@ coppock_2017a,combined_estimate,In-text,Combined estimate of Trump support (%),3
 coppock_2017a,combined_estimate_se,In-text,SE of the combined estimate (pp),2.942296860666275,2.9,1,2.942296860666275,1,NA,
 coppock_2017a,combined_minus_direct,In-text,Combined minus direct (pp),2.207089289837355,2.2,1,2.207089289837355,1,NA,
 coppock_2017a,combined_minus_direct_se,In-text,SE of combined minus direct (pp),2.829207705448373,2.9,0,2.829207705448373,0,archive,Bootstrap standard error. The deposited resampling code postdates publication by two years and no configuration of it recovers the published value exactly
-coppock_2017a,placebo_estimate,In-text,Joint test: list estimate among admitted supporters (%),85.73226478065189,85.7,1,85.73226478065189,1,NA,
-coppock_2017a,placebo_estimate_se,In-text,Joint test: standard error (pp),5.606396154510785,5.6,1,5.606396154510785,1,NA,
-coppock_2017a,placebo_p_value,In-text,Joint test: two-sided p-value,0.01093080517846666,0.01,1,0.01093080517846666,1,NA,
+coppock_2017a,placebo_estimate,In-text,Joint test: list estimate among admitted supporters (%),85.73226478065187,85.7,1,85.73226478065187,1,NA,
+coppock_2017a,placebo_estimate_se,In-text,Joint test: standard error (pp),5.606396154510786,5.6,1,5.606396154510786,1,NA,
+coppock_2017a,placebo_p_value,In-text,Joint test: two-sided p-value,0.01093080517846656,0.01,1,0.01093080517846656,1,NA,
 coppock_2017a,desc_list_below_direct,Descriptive,The list experiment estimate is below the direct question estimate,NA,NA,NA,2.969982549481154,1,NA,Direct question 32.5 per cent against list experiment 29.6 per cent
 coppock_2017a,desc_direct_minus_list_not_significant,Descriptive,The difference between the two modes is not distinguishable from zero,NA,NA,NA,2.969982549481153,1,NA,"Difference 3.0 points, 95 per cent bootstrap interval -3.7 to 9.2"
-coppock_2017a,desc_nondiscloser_not_significant,Descriptive,The list estimate among non-disclosers is not distinguishable from zero,NA,NA,NA,3.272077956640164,1,NA,"Estimate 3.3 points, HC2 standard error 4.2 points, t = 0.77"
+coppock_2017a,desc_nondiscloser_not_significant,Descriptive,The list estimate among non-disclosers is not distinguishable from zero,NA,NA,NA,3.2720779566401617,1,NA,"Estimate 3.3 points, HC2 standard error 4.2 points, t = 0.77"
 coppock_2017a,desc_party_gradient,Descriptive,Democrats are unlikely and Republicans likely to support Trump,NA,NA,NA,NA,1,NA,Direct question support: Strong democrat 4.5; Not very strong democrat 9.2; Lean democrat 13.0; Lean republican 73.4; Not very strong republican 68.1; Strong republican 90.4
 coppock_2017a,desc_education_gradient,Descriptive,More educated groups support Trump less,NA,NA,NA,NA,NA,NA,Direct question support in published order: Less than high school 30.7; High school or some college 34.4; College 30.1; Graduate school 25.8
 coppock_2017a,desc_less_than_high_school_smallest,Descriptive,The least educated group is the smallest and its estimates the most uncertain,NA,NA,NA,157,1,NA,"Smallest subgroup is Less than high school at N = 157; its list experiment standard error is 18.6 points, the largest of any subgroup"

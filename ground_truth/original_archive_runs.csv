@@ -1,5 +1,5 @@
 run_id,script,sims,sampler,inputs,status,stray_files_written,deposited_files_overwritten,warning_blocks,minutes
-current,shy_trump_analysis.r,2000,current,code and data only,completed,Rplots.pdf,,4,10.652273265520732
-rounding,shy_trump_analysis.r,2000,rounding,code and data only,completed,Rplots.pdf,,4,10.435560333728791
-shipped,shy_trump_analysis.r,200,current,code and data only,completed,Rplots.pdf,,5,1.1295024832089742
-shipped_as_deposited,shy_trump_analysis.r,200,current,as shipped,completed,Rplots.pdf,,5,1.1235087513923645
+current,shy_trump_analysis.r,2000,current,code and data only,completed,Rplots.pdf,,4,14.494725751876832
+rounding,shy_trump_analysis.r,2000,rounding,code and data only,completed,Rplots.pdf,,4,10.474925748507182
+shipped,shy_trump_analysis.r,200,current,code and data only,completed,Rplots.pdf,,5,1.13732990026474
+shipped_as_deposited,shy_trump_analysis.r,200,current,as shipped,completed,Rplots.pdf,,5,1.1397804816563923

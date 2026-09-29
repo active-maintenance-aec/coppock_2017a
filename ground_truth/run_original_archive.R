@@ -38,11 +38,15 @@
 #   over. That is the measurement behind the rule against running an archive in
 #   place, and it is cheap enough that there is no reason to assert it instead.
 #
-#   Three edits are made to the copy of the deposited script, and no others. Two
+#   Four edits are made to the copy of the deposited script, and no others. Two
 #   fill in lines the deposit itself marks as user-configurable:
 #     setwd("")    the deposit says "Uncomment to set working directory"
 #     sims <- 200  the deposit says "The article uses 2000 sims" one line above
-#   The third appends a block that saves objects the script has already computed,
+#   The third reads the placebo estimate and standard error with pull() rather
+#   than tidy(placebo_r)[2,2] and [2,3]. estimatr 2.0's tidy() returns a tibble,
+#   which does not drop a one-cell index to a number, so the deposit's next line
+#   stops in pnorm(). The values read are the same.
+#   The fourth appends a block that saves objects the script has already computed,
 #   and re-evaluates two expressions the script prints but does not store. Nothing
 #   in the analysis is altered.
 
@@ -120,8 +124,13 @@ run_archive <- function(run_id, sampler, sims, inputs) {
   src <- read_lines(file.path(scratch, archive_code))
   src <- str_replace(src, '^# setwd\\(""\\)$', str_glue('setwd("{scratch}")'))
   src <- str_replace(src, "^sims <- 200$", str_glue("sims <- {sims}"))
+  src <- str_replace(src, "^est <- tidy\\(placebo_r\\)\\[2,2\\]$",
+                     "est <- pull(tidy(placebo_r), estimate)[2]")
+  src <- str_replace(src, "^se <- tidy\\(placebo_r\\)\\[2,3\\]$",
+                     "se <- pull(tidy(placebo_r), std.error)[2]")
   stopifnot(any(str_detect(src, "^setwd\\(")),
-            any(str_detect(src, str_glue("^sims <- {sims}$"))))
+            any(str_detect(src, str_glue("^sims <- {sims}$"))),
+            sum(str_detect(src, "^(est|se) <- pull\\(tidy\\(placebo_r\\)")) == 2)
 
   preamble <- if (sampler == "rounding") 'suppressWarnings(RNGkind(sample.kind = "Rounding"))'
 

@@ -1,12 +1,12 @@
 step,minutes
-download_original.R,0.007820701599121094
-maintained/clean_trump.R,0.014016016324361166
-maintained/table_2_list_response_distribution.R,6.098826726277669e-4
-maintained/figure_1_direct_vs_list_estimates.R,9.489043052991232
-maintained/table_a1_subgroup_estimates.R,4.6511491139729816e-4
-maintained/text_main_estimates.R,0.051691865921020506
-maintained/text_descriptive_claims.R,4.260977109273275e-4
-ground_truth/run_original_archive.R,23.34286141792933
-ground_truth/build_ground_truth.R,0.002169680595397949
-maintained/in_text_claims.R,4.010359446207682e-4
-download_original.R (re-verify),1.79596741994222e-4
+download_original.R,0.01208964983622233
+maintained/clean_trump.R,0.02571880022684733
+maintained/table_2_list_response_distribution.R,0.002096231778462728
+maintained/figure_1_direct_vs_list_estimates.R,14.538823350270588
+maintained/table_a1_subgroup_estimates.R,8.030017217000325e-4
+maintained/text_main_estimates.R,0.0731688658396403
+maintained/text_descriptive_claims.R,7.543683052062989e-4
+ground_truth/run_original_archive.R,27.248999683062234
+ground_truth/build_ground_truth.R,0.00225296417872111
+maintained/in_text_claims.R,4.0018161137898763e-4
+download_original.R (re-verify),0.0021039168039957683

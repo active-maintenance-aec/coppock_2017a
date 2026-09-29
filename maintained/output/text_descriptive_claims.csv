@@ -1,7 +1,7 @@
 claim_id,claim,computed,holds,evidence
 desc_list_below_direct,The list experiment estimate is below the direct question estimate,2.969982549481154,1,Direct question 32.5 per cent against list experiment 29.6 per cent
 desc_direct_minus_list_not_significant,The difference between the two modes is not distinguishable from zero,2.969982549481153,1,"Difference 3.0 points, 95 per cent bootstrap interval -3.7 to 9.2"
-desc_nondiscloser_not_significant,The list estimate among non-disclosers is not distinguishable from zero,3.272077956640164,1,"Estimate 3.3 points, HC2 standard error 4.2 points, t = 0.77"
+desc_nondiscloser_not_significant,The list estimate among non-disclosers is not distinguishable from zero,3.2720779566401617,1,"Estimate 3.3 points, HC2 standard error 4.2 points, t = 0.77"
 desc_party_gradient,Democrats are unlikely and Republicans likely to support Trump,NA,1,Direct question support: Strong democrat 4.5; Not very strong democrat 9.2; Lean democrat 13.0; Lean republican 73.4; Not very strong republican 68.1; Strong republican 90.4
 desc_education_gradient,More educated groups support Trump less,NA,NA,Direct question support in published order: Less than high school 30.7; High school or some college 34.4; College 30.1; Graduate school 25.8
 desc_less_than_high_school_smallest,The least educated group is the smallest and its estimates the most uncertain,157,1,"Smallest subgroup is Less than high school at N = 157; its list experiment standard error is 18.6 points, the largest of any subgroup"
