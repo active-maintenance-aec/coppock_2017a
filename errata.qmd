@@ -213,6 +213,18 @@ entries <- tribble(
     "Every other narrative citation in the article parenthesises its year: Blair and Imai ",
     "(2012), Glynn (2013), Imai (2011), Dropp (2015). The authors' own source sets this one ",
     "with the same macro as the others, so the parentheses were lost in typesetting."),
+  "",
+
+  10, "wording", "reading", "full",
+  "A second dropped word in the abstract",
+  "published Abstract",
+  "the list experiment estimate is actually lower than [[direct]] question estimate",
+  "the list experiment estimate is actually lower than [[the direct]] question estimate",
+  str_glue(
+    "The same omission as entries 7 and 8, in the same sentence as entry 7, and missing from ",
+    "the deposited manuscript as well. Everywhere else the article writes \"the direct ",
+    "question estimate\"; the sentence's own subject, \"the list experiment estimate,\" takes ",
+    "the article too. Found while setting entry 7 for the remastered edition."),
   ""
 ) |>
   mutate(across(c(title, published, corrected, note), as.character))
