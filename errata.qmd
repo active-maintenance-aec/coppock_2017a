@@ -41,8 +41,11 @@ comma <- function(x) format(x, big.mark = ",", trim = TRUE)
 # [[...]] marks the span that changes. Each renderer supplies its own markup for it: bold
 # here. Nothing else in a field is markup, so the same string can be set by any of them.
 #
-# Numbering is the published note's and is APPEND-ONLY: entry 2 can already have been cited,
-# so a later finding is added at the end and never interleaved.
+# Numbering follows PROCEDURES.md Stage 4b: entries are ordered by severity block (quantity;
+# description, interpretation, definition; label, float, cross_reference; wording, spelling,
+# typography; bibliographic), discovery order inside a block, and a finding that lands in an
+# earlier block renumbers the entries after it. Renumbered 2026-11-07; the old-to-new map is
+# in that day's commit message.
 #
 # A published or corrected value that the pipeline computes stays computed: the field is
 # built with str_glue() so the number is produced when this document renders, not typed.
@@ -105,7 +108,7 @@ income_label_claim_ids <- c(
 # same expression that builds the marked span of the corrected sentence, so the two cannot be
 # written apart, and the gate below re-checks that each one is still inside its span. An
 # entry that changes no quantity (a label, a definition, a note, wording, typography) carries
-# NA. Entry 1 changes the length of a scale and is a definition, so it carries NA.
+# NA. Entry 4 changes the length of a scale and is a definition, so it carries NA.
 cv_se    <- sprintf('%.1f', 100 * entire('Difference', 'se'))
 cv_diff  <- sprintf('%.1f', 100 * entire('Difference'))
 cv_other <- sprintf('%.1f', 100 * text_val('direct_share_other'))
@@ -113,30 +116,18 @@ cv_other <- sprintf('%.1f', 100 * text_val('direct_share_other'))
 entries <- tribble(
   ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids, ~corrected_values,
 
-  1, "definition", "pipeline", "full",
-  "Length of the income scale in Equation 1",
-  "published Equation 1",
-  "A brief justification of this specification: all variables except for 7-point Party ID and [[22-point]] Income are indicators, so not many modeling choices must be made.",
-  str_glue("A brief justification of this specification: all variables except for 7-point Party ID and [[{sprintf('%.0f', text_val('income_points'))}-point]] Income are indicators, so not many modeling choices must be made."),
-  str_glue(
-    "The deposited income variable takes {sprintf('%.0f', text_val('income_points'))} ",
-    "distinct values, 1 through {sprintf('%.0f', text_val('income_points'))}, with every ",
-    "value present, and the deposited script enters it as it stands."),
-  "results_income_points",
-  NA_character_,
-
-  2, "quantity", "pipeline", "full",
+  1, "quantity", "pipeline", "full",
   "Standard error of the difference between the two estimates",
-  "published Combined Estimate",
+  "Combined Estimate",
   "The bootstrapped standard error of this difference is [[3.4]] points, indicating that is not statistically significantly different from zero.",
   str_glue("The bootstrapped standard error of this difference is [[{cv_se}]] points, indicating that is not statistically significantly different from zero."),
   "",
   "results_direct_minus_list_se",
   cv_se,
 
-  3, "quantity", "pipeline", "full",
+  2, "quantity", "pipeline", "full",
   "Difference between the direct question and the list experiment",
-  "published Results",
+  "Results",
   "Recall that the direct question estimate of Trump support was 32.5%, for a [[2.9]] percentage points difference.",
   str_glue("Recall that the direct question estimate of Trump support was 32.5%, for a [[{cv_diff}]] percentage points difference."),
   str_glue(
@@ -146,9 +137,9 @@ entries <- tribble(
   "results_direct_minus_list",
   cv_diff,
 
-  4, "quantity", "pipeline", "full",
+  3, "quantity", "pipeline", "full",
   "Share reporting other, would not vote, or undecided",
-  "published Design",
+  "Design",
   "Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while [[30.5%]] reported that they would vote for other candidates, would not vote, or were still undecided.",
   str_glue("Respondents split 32.5% for Donald Trump and 37.0% for Hillary Clinton, while [[{cv_other}%]] reported that they would vote for other candidates, would not vote, or were still undecided."),
   str_glue(
@@ -158,9 +149,21 @@ entries <- tribble(
   "design_direct_share_other",
   cv_other,
 
+  4, "definition", "pipeline", "full",
+  "Length of the income scale in Equation 1",
+  "Equation 1",
+  "A brief justification of this specification: all variables except for 7-point Party ID and [[22-point]] Income are indicators, so not many modeling choices must be made.",
+  str_glue("A brief justification of this specification: all variables except for 7-point Party ID and [[{sprintf('%.0f', text_val('income_points'))}-point]] Income are indicators, so not many modeling choices must be made."),
+  str_glue(
+    "The deposited income variable takes {sprintf('%.0f', text_val('income_points'))} ",
+    "distinct values, 1 through {sprintf('%.0f', text_val('income_points'))}, with every ",
+    "value present, and the deposited script enters it as it stands."),
+  "results_income_points",
+  NA_character_,
+
   5, "label", "pipeline", "full",
   "The income quintile rows of Figure 1 and Table A1 carry each other's labels",
-  "published Figure 1 and Table A1",
+  "Figure 1 and Table A1",
   "[[Below 20th income percentile]], [[20th-40th income percentile]], [[40th-60th income percentile]], [[60th-80th income percentile]], [[Above 80th income percentile]]",
   "[[20th-40th income percentile]], [[40th-60th income percentile]], [[60th-80th income percentile]], [[Above 80th income percentile]], [[Below 20th income percentile]]",
   str_glue(
@@ -183,9 +186,9 @@ entries <- tribble(
   paste(income_label_claim_ids, collapse = ";"),
   NA_character_,
 
-  6, "note", "reading", "brief",
+  6, "spelling", "reading", "brief",
   "A misspelling in the note to Table A1",
-  "published, the note to Table A1",
+  "the note to Table A1",
   "Adjusted [[direction]] question estimates are predictions from a logistic regression.",
   "Adjusted [[direct]] question estimates are predictions from a logistic regression.",
   str_glue(
@@ -199,7 +202,7 @@ entries <- tribble(
 
   7, "wording", "reading", "full",
   "A dropped word in the abstract",
-  "published Abstract",
+  "Abstract",
   "A list experiment conducted on the same respondents yields an [[estimate]] 29.6%",
   "A list experiment conducted on the same respondents yields an [[estimate of]] 29.6%",
   str_glue(
@@ -212,7 +215,7 @@ entries <- tribble(
 
   8, "wording", "reading", "full",
   "A dropped word in the Combined Estimate section",
-  "published Combined Estimate",
+  "Combined Estimate",
   "we should discount the value [[the]] combined estimate",
   "we should discount the value [[of the]] combined estimate",
   str_glue(
@@ -224,7 +227,7 @@ entries <- tribble(
 
   9, "typography", "reading", "brief",
   "A narrative citation set without its parentheses",
-  "published Combined Estimate",
+  "Combined Estimate",
   "Aronow et al. [[2015]] also propose a joint test",
   "Aronow et al. [[(2015)]] also propose a joint test",
   str_glue(
@@ -236,7 +239,7 @@ entries <- tribble(
 
   10, "wording", "reading", "full",
   "A second dropped word in the abstract",
-  "published Abstract",
+  "Abstract",
   "the list experiment estimate is actually lower than [[direct]] question estimate",
   "the list experiment estimate is actually lower than [[the direct]] question estimate",
   str_glue(
@@ -331,5 +334,12 @@ walk(seq_len(nrow(entries)), function(i) {
 ```{r emit-spine}
 # The machine-readable spine, written wherever this document is rendered. Anything else that
 # carries these corrections reads it rather than keeping its own copy, so the two cannot drift.
+# The spine's vocabularies are closed (cleanup of 2026-11-07): a value outside them is a
+# typo, and the edition builders read these columns to shape every entry.
+stopifnot(
+  all(entries$class %in% c("quantity", "description", "interpretation", "definition", "label", "float", "cross_reference", "wording", "spelling", "typography", "bibliographic")),
+  all(entries$form %in% c("full", "brief", "note")),
+  all(entries$source %in% c("pipeline", "reading", "reference_audit", "publisher_record", "authors_archive", "proof"))
+)
 write_csv(entries, here("errata_entries.csv"))
 ```
