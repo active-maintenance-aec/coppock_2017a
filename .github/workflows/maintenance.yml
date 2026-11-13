@@ -17,3 +17,5 @@ jobs:
     uses: active-maintenance-aec/maintenance/.github/workflows/check.yml@main
     with:
       phase: 0
+      unjudged: "ground_truth/original_archive_* ground_truth/sampler_comparison.csv maintained/output/figure_1_* maintained/output/table_a1_subgroup_estimates.* maintained/output/text_descriptive_claims.csv"
+      verdicts_only: "ground_truth/coppock_2017a_ground_truth.csv"
