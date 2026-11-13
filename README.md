@@ -21,7 +21,10 @@
 - [Maintained rewrite verification](#maintained-rewrite-verification)
 - [R environment](#r-environment)
 
-**Archived at Zenodo:** [doi:10.5281/zenodo.24168301](https://doi.org/10.5281/zenodo.24168301). This DOI always resolves to the latest release of the maintained version.
+**Archived at Zenodo:**
+[doi:10.5281/zenodo.24168301](https://doi.org/10.5281/zenodo.24168301).
+This DOI always resolves to the latest release of the maintained
+version.
 
 *Drafted by Claude Opus 5 under the supervision of Alex Coppock.*
 
@@ -81,11 +84,11 @@ packages: tidyverse, estimatr, survey, list, rsample, knitr, kableExtra,
 here. Paths resolve through `here`, so nothing depends on the working
 directory.
 
-The run that produced the committed output took 34 minutes, recorded
+The run that produced the committed output took 46 minutes, recorded
 step by step in `run_timings.csv`. Every duration quoted below is read
 from that file rather than estimated, so none of them can go stale; they
 are wall clock on one machine and indicative rather than a benchmark.
-10.3 minutes of that is Figure 1, which refits 6 estimators in 25
+17.3 minutes of that is Figure 1, which refits 6 estimators in 25
 subgroups across 2,000 bootstrap replicates and is almost the whole cost
 of the rewrite. Most of the rest is the deposited script, which does the
 same work more slowly and is run 4 times, at two replicate counts, under
@@ -106,9 +109,10 @@ Two questions, answered before the detail.
 ## Does the deposited archive run?
 
 Yes. The deposit is a single script, `shy_trump_analysis.r`, and it runs
-start to finish under R 4.6.0 with no change to any line of analysis.
-All 4 runs of it recorded in `ground_truth/original_archive_runs.csv`
-completed, with deprecation warnings and no errors. One dependency is
+start to finish under R 4.6.2 with no change to any line of analysis.
+All 4 runs of it completed, with deprecation warnings and no errors;
+`ground_truth/archive_run_status.csv` records both of its passes,
+stripped to code and data and as shipped, as clean. One dependency is
 missing from its own commented `install.packages()` line, which names
 seven packages: the script also calls `arm::invlogit()`,
 namespace-qualified, so `arm` has to be installed and is never named.
@@ -313,9 +317,9 @@ matches 39 and lands 0.13 points from the published figure on average;
 at the 200 it ships it matches 37 and lands 0.26 points away. The point
 estimates are unaffected either way, since they do not depend on the
 bootstrap. The shipped configuration is therefore not what makes the
-standard errors irreproducible, and “take a while” was 11.2 minutes at
-2,000 replicates on the run that produced this report, against 1.1 at
-200. The rewrite drew the same 2,000 replicates in 10.3 minutes.
+standard errors irreproducible, and “take a while” was 15.5 minutes at
+2,000 replicates on the run that produced this report, against 1.2 at
+200. The rewrite drew the same 2,000 replicates in 17.3 minutes.
 
 **How the archive is run here.** `ground_truth/run_original_archive.R`
 copies the deposit into a scratch directory, because the script writes
@@ -416,7 +420,7 @@ rotated ones. What changes is which five-row block of numbers belongs to
 which quintile.
 
 The maintained rewrite prints the labels the data supports. Those 64
-ground-truth rows therefore carry `match_rewrite = 0` with a note
+ground-truth rows therefore carry `match_rewrite = FALSE` with a note
 recording that the disagreement is intentional.
 
 # What counts as a claim
@@ -776,13 +780,13 @@ byte-identical.
 | Package    | Version |
 |:-----------|--------:|
 | tidyverse  |   2.0.0 |
-| estimatr   |   1.0.6 |
+| estimatr   |   2.0.1 |
 | survey     |     4.5 |
 | list       |   9.2.6 |
 | rsample    |   1.3.2 |
-| knitr      |    1.51 |
-| kableExtra |   1.4.0 |
+| knitr      |    1.52 |
+| kableExtra |   1.4.1 |
 | here       |   1.0.2 |
 
-R version: R version 4.6.0 (2026-04-24). Platform:
+R version: R version 4.6.2 (2026-10-29). Platform:
 aarch64-apple-darwin23.

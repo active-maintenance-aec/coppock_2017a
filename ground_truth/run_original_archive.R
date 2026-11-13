@@ -1,7 +1,9 @@
 # coppock_2017a/ground_truth/run_original_archive.R
 # Output: ground_truth/original_archive_estimates.csv,
 #         ground_truth/original_archive_scalars.csv,
-#         ground_truth/original_archive_runs.csv
+#         ground_truth/original_archive_configurations.csv,
+#         ground_truth/archive_run_status.csv,
+#         ground_truth/archive_overwrites.csv
 # Depends on: original/ (run download_original.R first)
 # Description: Run the deposited analysis script as deposited and capture its
 #   numbers, so the ground truth can compare the archive against the article
@@ -23,6 +25,8 @@
 #     shipped_as_deposited
 #               the same 200 replicates, run against every file the deposit ships
 #               rather than against code and data alone.
+#   The first three are the stripped pass and the fourth the as-shipped pass, in
+#   the vocabulary of archive_run_status.csv.
 #   Running each in its own process means the sampler in this session is never
 #   touched; the assertion at the end of this file records that.
 #
@@ -31,8 +35,8 @@
 #   loading an intermediate the archive ships rather than one it built, and the
 #   only way to tell is to remove everything that is neither data nor code. This
 #   deposit ships no intermediates at all, so the test passes trivially, but both
-#   input sets are run and the status of each is recorded in
-#   original_archive_runs.csv rather than assumed.
+#   input sets are run and the outcome of each is recorded in
+#   archive_run_status.csv rather than assumed.
 #
 #   Every run also records, by modification time, which deposited files it wrote
 #   over. That is the measurement behind the rule against running an archive in
@@ -102,8 +106,8 @@ saveRDS(captured, "[capture_path]")
 # The deposit is run in a scratch copy, never in original/, because the script
 # opens a graphics device and writes Rplots.pdf into its working directory. An
 # archive that writes into itself silently overwrites part of the deposit.
-run_archive <- function(run_id, sampler, sims, inputs) {
-  deposited <- if (inputs == "as shipped") {
+run_archive <- function(run_id, sampler, sims, pass) {
+  deposited <- if (pass == "as_shipped") {
     c(archive_code, archive_data, archive_readme)
   } else {
     c(archive_code, archive_data)
@@ -117,6 +121,7 @@ run_archive <- function(run_id, sampler, sims, inputs) {
 
   # Which deposited files the run writes over, measured rather than asserted.
   mtimes_before <- file.mtime(file.path(scratch, deposited)) |> set_names(deposited)
+  md5_before <- tools::md5sum(file.path(scratch, deposited)) |> set_names(deposited)
 
   capture_path <- file.path(scratch, str_glue("captured_{run_id}.rds"))
   log_path <- file.path(scratch, str_glue("log_{run_id}.txt"))
@@ -152,14 +157,18 @@ run_archive <- function(run_id, sampler, sims, inputs) {
   }
 
   mtimes_after <- file.mtime(file.path(scratch, deposited)) |> set_names(deposited)
+  md5_after <- tools::md5sum(file.path(scratch, deposited)) |> set_names(deposited)
+  overwritten <- deposited[mtimes_after != mtimes_before]
 
   list(
     captured = read_rds(capture_path),
     log = console,
+    exit_status = 0L,
     stray_files = setdiff(list.files(scratch, all.files = TRUE, no.. = TRUE),
                           c(deposited, basename(capture_path),
                             basename(log_path), basename(runner))),
-    deposited_files_overwritten = deposited[mtimes_after != mtimes_before],
+    deposited_files_overwritten = overwritten,
+    overwritten_matches_deposit = unname(md5_after[overwritten] == md5_before[overwritten]),
     minutes = elapsed
   )
 }
@@ -168,8 +177,7 @@ run_plan <- tibble(
   run_id = c("current", "rounding", "shipped", "shipped_as_deposited"),
   sampler = c("current", "rounding", "current", "current"),
   sims = c(2000, 2000, 200, 200),
-  inputs = c("code and data only", "code and data only", "code and data only",
-             "as shipped")
+  pass = c("stripped", "stripped", "stripped", "as_shipped")
 )
 
 runs <- pmap(run_plan, run_archive) |>
@@ -177,25 +185,49 @@ runs <- pmap(run_plan, run_archive) |>
 
 archive <- map(runs, "captured")
 
-# What each run of each deposited script did ----
-# One row per script per configuration, covering both input sets. inputs records
-# whether the copy held nothing but the deposit's own code and data, in which case
-# no script can have passed by reading an intermediate the deposit ships, or every
-# file the deposit contains.
-run_log <- run_plan |>
+# What each run of the deposited script did ----
+# The canonical archive tables are one row per script per pass, and three of the
+# four runs share the stripped pass, so the pass is the unit here: a pass ran clean
+# only if every run in it did, and a file it added or wrote over is listed once.
+# The configurations, which differ by replicate count and sampler rather than by
+# input set, are recorded with their run time in
+# original_archive_configurations.csv, which the README reads.
+configurations <- run_plan |>
   mutate(
-    script = archive_code,
-    status = "completed",
-    stray_files_written = map_chr(runs, \(r) paste(r$stray_files, collapse = "; ")),
-    deposited_files_overwritten =
-      map_chr(runs, \(r) paste(r$deposited_files_overwritten, collapse = "; ")),
     warning_blocks = map_int(runs, \(r) sum(str_detect(r$log, "^Warning message"))),
     minutes = map_dbl(runs, "minutes")
   ) |>
-  select(run_id, script, sims, sampler, inputs, status, stray_files_written,
-         deposited_files_overwritten, warning_blocks, minutes)
+  select(run_id, pass, sims, sampler, warning_blocks, minutes)
 
-write_csv(run_log, here::here("ground_truth", "original_archive_runs.csv"))
+write_csv(configurations,
+          here::here("ground_truth", "original_archive_configurations.csv"))
+
+run_status <- run_plan |>
+  mutate(exit_status = map_int(runs, "exit_status")) |>
+  summarize(exit_status = max(exit_status), .by = pass) |>
+  transmute(pass, script = archive_code, role = "analysis", exit_status,
+            outcome = if_else(exit_status == 0, "clean", "error"),
+            stopped_at = NA_character_)
+
+overwrites <- map2(runs, run_plan$pass, \(r, p) {
+  tibble(
+    pass = p,
+    file = c(r$stray_files, r$deposited_files_overwritten),
+    effect = rep(c("added", "overwritten"),
+                 c(length(r$stray_files), length(r$deposited_files_overwritten))),
+    matches_deposit = c(rep(NA, length(r$stray_files)), r$overwritten_matches_deposit)
+  )
+}) |>
+  list_rbind() |>
+  distinct() |>
+  arrange(desc(pass), effect, file)
+
+# A file written over in one run of a pass and left intact in another would appear
+# twice above with two verdicts, which the one-row-per-file table cannot hold.
+stopifnot(!any(duplicated(select(overwrites, pass, file, effect))))
+
+write_csv(run_status, here::here("ground_truth", "archive_run_status.csv"))
+write_csv(overwrites, here::here("ground_truth", "archive_overwrites.csv"))
 
 # Subgroup estimates ----
 # results_df carries the archive's own subgroup labels, which is what the
@@ -269,7 +301,9 @@ write_csv(bind_rows(scalars, table_2),
 # sequence and a leaked sampler would silently change every draw after this one.
 stopifnot(identical(RNGkind()[3], "Rejection"))
 
-print(run_log, width = 200)
+print(configurations, width = 200)
+print(run_status, width = 200)
+print(overwrites, width = 200)
 
 print(str_glue("Archive run captured: {nrow(estimates)} subgroup estimates and ",
                "{nrow(scalars) + nrow(table_2)} scalars across {nrow(run_plan)} runs."))

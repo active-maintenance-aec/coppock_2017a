@@ -1,0 +1,5 @@
+float,published_numbers,covered,reproduced_by_rewrite,reproduced_by_archive,plotted,plotted_reproduced,note
+Table 1,1,0,0,0,NA,NA,"The wording of the two lists; its one number, the 15 dollar minimum wage in a list item, is definitional, so it is counted and not covered."
+Table 2,11,11,11,11,NA,NA,"The article leaves the control list's 4 items cell blank, so it is not a printed number."
+Figure 1,0,0,0,0,150,120,"Prints no numbers on its face beyond its axis; plotted counts the 25 subgroups by six estimators, each point drawn with its interval, and a point is reproduced when its Table A1 cell is."
+Table A1,325,325,180,227,NA,NA,"The five income blocks carry the labels the data supports in the rewrite, so they disagree with the page by construction (errata entry 5)."

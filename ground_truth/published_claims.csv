@@ -1,402 +1,402 @@
-claim_id,location,claim_type,value_paper
-abstract_n_respondents,Abstract,pipeline,5290
-abstract_field_dates,Abstract,structural,
-abstract_direct_share,Abstract,pipeline,32.5
-abstract_list_estimate,Abstract,pipeline,29.6
-desc_list_below_direct,Abstract,descriptive,
-intro_wisconsin_forecast_clinton,Introduction,transcribed,49.6
-intro_wisconsin_forecast_trump,Introduction,transcribed,44.3
-intro_wisconsin_actual_clinton,Introduction,transcribed,46.5
-intro_wisconsin_actual_trump,Introduction,transcribed,47.2
-intro_wisconsin_error,Introduction,transcribed,6
-intro_michigan_error,Introduction,transcribed,4.5
-intro_pennsylvania_error,Introduction,transcribed,4.4
-intro_popular_vote_actual_clinton,Introduction,transcribed,48.0
-intro_popular_vote_actual_trump,Introduction,transcribed,45.9
-intro_popular_vote_forecast_clinton,Introduction,transcribed,48.5
-intro_popular_vote_forecast_trump,Introduction,transcribed,44.9
-intro_dropp_mode_gap,Introduction,transcribed,6
-design_n_respondents,Design,pipeline,5290
-design_field_dates,Design,structural,
-design_direct_share_trump,Design,pipeline,32.5
-design_direct_share_clinton,Design,pipeline,37.0
-design_direct_share_other,Design,pipeline,30.5
-design_direct_share_restated,Design,pipeline,32.5
-design_minimum_wage_item,Table 1,definitional,15
-design_list_lengths,Design,definitional,
-results_list_mean_control,Results,pipeline,1.548
-results_list_mean_treatment,Results,pipeline,1.843
-results_list_ate_proportion,Results,pipeline,0.296
-results_list_ate_percent,Results,pipeline,29.6
-results_direct_share_restated,Results,pipeline,32.5
-results_direct_minus_list,Results,pipeline,2.9
-results_direct_minus_list_se,Results,pipeline,3.4
-desc_direct_minus_list_not_significant,Results,descriptive,
-results_share_not_reporting_trump,Results,pipeline,67.5
-results_nondiscloser_mean_control,Results,pipeline,1.610
-results_nondiscloser_mean_treatment,Results,pipeline,1.642
-results_nondiscloser_list_ate,Results,pipeline,3.3
-desc_nondiscloser_not_significant,Results,descriptive,
-results_adjusted_range,Results,definitional,
-results_party_id_points,Equation 1,pipeline,7
-results_income_points,Equation 1,pipeline,22
-results_interval_level,Results,definitional,95
-desc_party_gradient,Results,descriptive,
-desc_education_gradient,Results,descriptive,
-desc_less_than_high_school_smallest,Results,descriptive,
-desc_income_groups_similar,Results,descriptive,
-desc_gender_similar,Results,descriptive,
-desc_white_highest,Results,descriptive,
-desc_likely_voters_higher,Results,descriptive,
-desc_unadjusted_mostly_cover_zero,Results,descriptive,
-desc_adjusted_intervals_shrink,Results,descriptive,
-desc_adjusted_all_but_one,Results,descriptive,
-results_n_subgroups,Results,pipeline,25
-combined_estimate,Combined Estimate,pipeline,34.8
-combined_estimate_se,Combined Estimate,pipeline,2.9
-combined_minus_direct,Combined Estimate,pipeline,2.2
-combined_minus_direct_se,Combined Estimate,pipeline,2.9
-desc_combined_not_significant,Combined Estimate,descriptive,
-combined_null_value,Combined Estimate,definitional,1
-placebo_estimate,Combined Estimate,pipeline,85.7
-placebo_estimate_se,Combined Estimate,pipeline,5.6
-placebo_null_value,Combined Estimate,definitional,100
-placebo_p_value,Combined Estimate,pipeline,0.01
-figure_1_axis_range,Figure 1,structural,
-table_2_control_list_0_items,Table 2,pipeline,0.11
-table_2_control_list_1_item,Table 2,pipeline,0.37
-table_2_control_list_2_items,Table 2,pipeline,0.40
-table_2_control_list_3_items,Table 2,pipeline,0.13
-table_2_control_list_4_items,Table 2,pipeline,
-table_2_treatment_list_0_items,Table 2,pipeline,0.11
-table_2_treatment_list_1_item,Table 2,pipeline,0.22
-table_2_treatment_list_2_items,Table 2,pipeline,0.46
-table_2_treatment_list_3_items,Table 2,pipeline,0.15
-table_2_treatment_list_4_items,Table 2,pipeline,0.06
-table_2_control_list_n,Table 2,pipeline,2645
-table_2_treatment_list_n,Table 2,pipeline,2645
-table_a1_entire_sample_direct_est,Table A1,pipeline,32.5
-table_a1_entire_sample_direct_est_se,Table A1,pipeline,0.8
-table_a1_entire_sample_list_est,Table A1,pipeline,29.6
-table_a1_entire_sample_list_est_se,Table A1,pipeline,3.4
-table_a1_entire_sample_difference,Table A1,pipeline,3.0
-table_a1_entire_sample_difference_se,Table A1,pipeline,3.4
-table_a1_entire_sample_direct_est_adj,Table A1,pipeline,33.6
-table_a1_entire_sample_direct_est_adj_se,Table A1,pipeline,0.7
-table_a1_entire_sample_list_est_adj,Table A1,pipeline,33.0
-table_a1_entire_sample_list_est_adj_se,Table A1,pipeline,2.6
-table_a1_entire_sample_difference_adj,Table A1,pipeline,0.6
-table_a1_entire_sample_difference_adj_se,Table A1,pipeline,2.6
-table_a1_strong_democrat_direct_est,Table A1,pipeline,4.5
-table_a1_strong_democrat_direct_est_se,Table A1,pipeline,0.8
-table_a1_strong_democrat_list_est,Table A1,pipeline,-4.3
-table_a1_strong_democrat_list_est_se,Table A1,pipeline,7.5
-table_a1_strong_democrat_difference,Table A1,pipeline,8.8
-table_a1_strong_democrat_difference_se,Table A1,pipeline,7.6
-table_a1_strong_democrat_direct_est_adj,Table A1,pipeline,5.0
-table_a1_strong_democrat_direct_est_adj_se,Table A1,pipeline,0.6
-table_a1_strong_democrat_list_est_adj,Table A1,pipeline,0.8
-table_a1_strong_democrat_list_est_adj_se,Table A1,pipeline,2.4
-table_a1_strong_democrat_difference_adj,Table A1,pipeline,4.2
-table_a1_strong_democrat_difference_adj_se,Table A1,pipeline,2.4
-table_a1_not_very_strong_democrat_direct_est,Table A1,pipeline,9.2
-table_a1_not_very_strong_democrat_direct_est_se,Table A1,pipeline,1.2
-table_a1_not_very_strong_democrat_list_est,Table A1,pipeline,5.0
-table_a1_not_very_strong_democrat_list_est_se,Table A1,pipeline,7.0
-table_a1_not_very_strong_democrat_difference,Table A1,pipeline,4.2
-table_a1_not_very_strong_democrat_difference_se,Table A1,pipeline,6.9
-table_a1_not_very_strong_democrat_direct_est_adj,Table A1,pipeline,8.0
-table_a1_not_very_strong_democrat_direct_est_adj_se,Table A1,pipeline,0.7
-table_a1_not_very_strong_democrat_list_est_adj,Table A1,pipeline,2.5
-table_a1_not_very_strong_democrat_list_est_adj_se,Table A1,pipeline,3.2
-table_a1_not_very_strong_democrat_difference_adj,Table A1,pipeline,5.5
-table_a1_not_very_strong_democrat_difference_adj_se,Table A1,pipeline,3.2
-table_a1_lean_democrat_direct_est,Table A1,pipeline,13.0
-table_a1_lean_democrat_direct_est_se,Table A1,pipeline,2.1
-table_a1_lean_democrat_list_est,Table A1,pipeline,8.4
-table_a1_lean_democrat_list_est_se,Table A1,pipeline,11.0
-table_a1_lean_democrat_difference,Table A1,pipeline,4.6
-table_a1_lean_democrat_difference_se,Table A1,pipeline,11.1
-table_a1_lean_democrat_direct_est_adj,Table A1,pipeline,13.0
-table_a1_lean_democrat_direct_est_adj_se,Table A1,pipeline,1.4
-table_a1_lean_democrat_list_est_adj,Table A1,pipeline,7.6
-table_a1_lean_democrat_list_est_adj_se,Table A1,pipeline,5.9
-table_a1_lean_democrat_difference_adj,Table A1,pipeline,5.5
-table_a1_lean_democrat_difference_adj_se,Table A1,pipeline,6.1
-table_a1_independent_direct_est,Table A1,pipeline,20.1
-table_a1_independent_direct_est_se,Table A1,pipeline,1.5
-table_a1_independent_list_est,Table A1,pipeline,24.3
-table_a1_independent_list_est_se,Table A1,pipeline,8.0
-table_a1_independent_difference,Table A1,pipeline,-4.2
-table_a1_independent_difference_se,Table A1,pipeline,8.1
-table_a1_independent_direct_est_adj,Table A1,pipeline,18.8
-table_a1_independent_direct_est_adj_se,Table A1,pipeline,1.4
-table_a1_independent_list_est_adj,Table A1,pipeline,26.5
-table_a1_independent_list_est_adj_se,Table A1,pipeline,6.9
-table_a1_independent_difference_adj,Table A1,pipeline,-7.7
-table_a1_independent_difference_adj_se,Table A1,pipeline,6.9
-table_a1_lean_republican_direct_est,Table A1,pipeline,73.4
-table_a1_lean_republican_direct_est_se,Table A1,pipeline,2.7
-table_a1_lean_republican_list_est,Table A1,pipeline,55.9
-table_a1_lean_republican_list_est_se,Table A1,pipeline,11.0
-table_a1_lean_republican_difference,Table A1,pipeline,17.6
-table_a1_lean_republican_difference_se,Table A1,pipeline,11.1
-table_a1_lean_republican_direct_est_adj,Table A1,pipeline,59.8
-table_a1_lean_republican_direct_est_adj_se,Table A1,pipeline,2.4
-table_a1_lean_republican_list_est_adj,Table A1,pipeline,48.5
-table_a1_lean_republican_list_est_adj_se,Table A1,pipeline,12.5
-table_a1_lean_republican_difference_adj,Table A1,pipeline,11.3
-table_a1_lean_republican_difference_adj_se,Table A1,pipeline,12.3
-table_a1_not_very_strong_republican_direct_est,Table A1,pipeline,68.1
-table_a1_not_very_strong_republican_direct_est_se,Table A1,pipeline,1.9
-table_a1_not_very_strong_republican_list_est,Table A1,pipeline,72.1
-table_a1_not_very_strong_republican_list_est_se,Table A1,pipeline,8.2
-table_a1_not_very_strong_republican_difference,Table A1,pipeline,-4.0
-table_a1_not_very_strong_republican_difference_se,Table A1,pipeline,8.0
-table_a1_not_very_strong_republican_direct_est_adj,Table A1,pipeline,72.4
-table_a1_not_very_strong_republican_direct_est_adj_se,Table A1,pipeline,1.3
-table_a1_not_very_strong_republican_list_est_adj,Table A1,pipeline,73.2
-table_a1_not_very_strong_republican_list_est_adj_se,Table A1,pipeline,6.9
-table_a1_not_very_strong_republican_difference_adj,Table A1,pipeline,-0.8
-table_a1_not_very_strong_republican_difference_adj_se,Table A1,pipeline,6.9
-table_a1_strong_republican_direct_est,Table A1,pipeline,90.4
-table_a1_strong_republican_direct_est_se,Table A1,pipeline,1.3
-table_a1_strong_republican_list_est,Table A1,pipeline,80.5
-table_a1_strong_republican_list_est_se,Table A1,pipeline,9.7
-table_a1_strong_republican_difference,Table A1,pipeline,9.9
-table_a1_strong_republican_difference_se,Table A1,pipeline,9.7
-table_a1_strong_republican_direct_est_adj,Table A1,pipeline,84.1
-table_a1_strong_republican_direct_est_adj_se,Table A1,pipeline,1.3
-table_a1_strong_republican_list_est_adj,Table A1,pipeline,89.6
-table_a1_strong_republican_list_est_adj_se,Table A1,pipeline,6.5
-table_a1_strong_republican_difference_adj,Table A1,pipeline,-5.5
-table_a1_strong_republican_difference_adj_se,Table A1,pipeline,6.6
-table_a1_less_than_high_school_direct_est,Table A1,pipeline,30.7
-table_a1_less_than_high_school_direct_est_se,Table A1,pipeline,4.2
-table_a1_less_than_high_school_list_est,Table A1,pipeline,-4.3
-table_a1_less_than_high_school_list_est_se,Table A1,pipeline,18.4
-table_a1_less_than_high_school_difference,Table A1,pipeline,35.1
-table_a1_less_than_high_school_difference_se,Table A1,pipeline,18.4
-table_a1_less_than_high_school_direct_est_adj,Table A1,pipeline,33.6
-table_a1_less_than_high_school_direct_est_adj_se,Table A1,pipeline,4.2
-table_a1_less_than_high_school_list_est_adj,Table A1,pipeline,15.3
-table_a1_less_than_high_school_list_est_adj_se,Table A1,pipeline,9.1
-table_a1_less_than_high_school_difference_adj,Table A1,pipeline,18.3
-table_a1_less_than_high_school_difference_adj_se,Table A1,pipeline,9.7
-table_a1_high_school_or_some_college_direct_est,Table A1,pipeline,34.4
-table_a1_high_school_or_some_college_direct_est_se,Table A1,pipeline,1.1
-table_a1_high_school_or_some_college_list_est,Table A1,pipeline,35.8
-table_a1_high_school_or_some_college_list_est_se,Table A1,pipeline,4.7
-table_a1_high_school_or_some_college_difference,Table A1,pipeline,-1.4
-table_a1_high_school_or_some_college_difference_se,Table A1,pipeline,4.6
-table_a1_high_school_or_some_college_direct_est_adj,Table A1,pipeline,36.2
-table_a1_high_school_or_some_college_direct_est_adj_se,Table A1,pipeline,1.0
-table_a1_high_school_or_some_college_list_est_adj,Table A1,pipeline,36.7
-table_a1_high_school_or_some_college_list_est_adj_se,Table A1,pipeline,4.2
-table_a1_high_school_or_some_college_difference_adj,Table A1,pipeline,-0.5
-table_a1_high_school_or_some_college_difference_adj_se,Table A1,pipeline,4.2
-table_a1_college_direct_est,Table A1,pipeline,30.1
-table_a1_college_direct_est_se,Table A1,pipeline,1.4
-table_a1_college_list_est,Table A1,pipeline,27.4
-table_a1_college_list_est_se,Table A1,pipeline,5.0
-table_a1_college_difference,Table A1,pipeline,2.7
-table_a1_college_difference_se,Table A1,pipeline,5.0
-table_a1_college_direct_est_adj,Table A1,pipeline,32.5
-table_a1_college_direct_est_adj_se,Table A1,pipeline,1.3
-table_a1_college_list_est_adj,Table A1,pipeline,35.5
-table_a1_college_list_est_adj_se,Table A1,pipeline,4.7
-table_a1_college_difference_adj,Table A1,pipeline,-3.0
-table_a1_college_difference_adj_se,Table A1,pipeline,4.6
-table_a1_graduate_school_direct_est,Table A1,pipeline,25.8
-table_a1_graduate_school_direct_est_se,Table A1,pipeline,1.7
-table_a1_graduate_school_list_est,Table A1,pipeline,10.9
-table_a1_graduate_school_list_est_se,Table A1,pipeline,6.7
-table_a1_graduate_school_difference,Table A1,pipeline,14.9
-table_a1_graduate_school_difference_se,Table A1,pipeline,6.5
-table_a1_graduate_school_direct_est_adj,Table A1,pipeline,27.1
-table_a1_graduate_school_direct_est_adj_se,Table A1,pipeline,1.6
-table_a1_graduate_school_list_est_adj,Table A1,pipeline,20.5
-table_a1_graduate_school_list_est_adj_se,Table A1,pipeline,4.7
-table_a1_graduate_school_difference_adj,Table A1,pipeline,6.6
-table_a1_graduate_school_difference_adj_se,Table A1,pipeline,4.5
-table_a1_below_20th_income_percentile_direct_est,Table A1,pipeline,30.7
-table_a1_below_20th_income_percentile_direct_est_se,Table A1,pipeline,1.8
-table_a1_below_20th_income_percentile_list_est,Table A1,pipeline,15.6
-table_a1_below_20th_income_percentile_list_est_se,Table A1,pipeline,8.2
-table_a1_below_20th_income_percentile_difference,Table A1,pipeline,15.1
-table_a1_below_20th_income_percentile_difference_se,Table A1,pipeline,7.8
-table_a1_below_20th_income_percentile_direct_est_adj,Table A1,pipeline,33.3
-table_a1_below_20th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.2
-table_a1_below_20th_income_percentile_list_est_adj,Table A1,pipeline,31.0
-table_a1_below_20th_income_percentile_list_est_adj_se,Table A1,pipeline,4.0
-table_a1_below_20th_income_percentile_difference_adj,Table A1,pipeline,2.4
-table_a1_below_20th_income_percentile_difference_adj_se,Table A1,pipeline,3.9
-table_a1_20th40th_income_percentile_direct_est,Table A1,pipeline,36.6
-table_a1_20th40th_income_percentile_direct_est_se,Table A1,pipeline,1.7
-table_a1_20th40th_income_percentile_list_est,Table A1,pipeline,38.4
-table_a1_20th40th_income_percentile_list_est_se,Table A1,pipeline,6.3
-table_a1_20th40th_income_percentile_difference,Table A1,pipeline,-1.8
-table_a1_20th40th_income_percentile_difference_se,Table A1,pipeline,6.2
-table_a1_20th40th_income_percentile_direct_est_adj,Table A1,pipeline,35.6
-table_a1_20th40th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.1
-table_a1_20th40th_income_percentile_list_est_adj,Table A1,pipeline,34.6
-table_a1_20th40th_income_percentile_list_est_adj_se,Table A1,pipeline,2.8
-table_a1_20th40th_income_percentile_difference_adj,Table A1,pipeline,0.9
-table_a1_20th40th_income_percentile_difference_adj_se,Table A1,pipeline,2.7
-table_a1_40th60th_income_percentile_direct_est,Table A1,pipeline,34.0
-table_a1_40th60th_income_percentile_direct_est_se,Table A1,pipeline,2.1
-table_a1_40th60th_income_percentile_list_est,Table A1,pipeline,19.7
-table_a1_40th60th_income_percentile_list_est_se,Table A1,pipeline,7.3
-table_a1_40th60th_income_percentile_difference,Table A1,pipeline,14.3
-table_a1_40th60th_income_percentile_difference_se,Table A1,pipeline,7.3
-table_a1_40th60th_income_percentile_direct_est_adj,Table A1,pipeline,34.0
-table_a1_40th60th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.3
-table_a1_40th60th_income_percentile_list_est_adj,Table A1,pipeline,34.8
-table_a1_40th60th_income_percentile_list_est_adj_se,Table A1,pipeline,3.3
-table_a1_40th60th_income_percentile_difference_adj,Table A1,pipeline,-0.8
-table_a1_40th60th_income_percentile_difference_adj_se,Table A1,pipeline,3.1
-table_a1_60th80th_income_percentile_direct_est,Table A1,pipeline,33.9
-table_a1_60th80th_income_percentile_direct_est_se,Table A1,pipeline,1.8
-table_a1_60th80th_income_percentile_list_est,Table A1,pipeline,40.7
-table_a1_60th80th_income_percentile_list_est_se,Table A1,pipeline,7.4
-table_a1_60th80th_income_percentile_difference,Table A1,pipeline,-6.8
-table_a1_60th80th_income_percentile_difference_se,Table A1,pipeline,7.4
-table_a1_60th80th_income_percentile_direct_est_adj,Table A1,pipeline,35.4
-table_a1_60th80th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.4
-table_a1_60th80th_income_percentile_list_est_adj,Table A1,pipeline,39.7
-table_a1_60th80th_income_percentile_list_est_adj_se,Table A1,pipeline,5.0
-table_a1_60th80th_income_percentile_difference_adj,Table A1,pipeline,-4.3
-table_a1_60th80th_income_percentile_difference_adj_se,Table A1,pipeline,4.9
-table_a1_above_80th_income_percentile_direct_est,Table A1,pipeline,27.2
-table_a1_above_80th_income_percentile_direct_est_se,Table A1,pipeline,2.0
-table_a1_above_80th_income_percentile_list_est,Table A1,pipeline,30.5
-table_a1_above_80th_income_percentile_list_est_se,Table A1,pipeline,8.8
-table_a1_above_80th_income_percentile_difference,Table A1,pipeline,-3.4
-table_a1_above_80th_income_percentile_difference_se,Table A1,pipeline,9.0
-table_a1_above_80th_income_percentile_direct_est_adj,Table A1,pipeline,27.5
-table_a1_above_80th_income_percentile_direct_est_adj_se,Table A1,pipeline,1.4
-table_a1_above_80th_income_percentile_list_est_adj,Table A1,pipeline,21.4
-table_a1_above_80th_income_percentile_list_est_adj_se,Table A1,pipeline,4.7
-table_a1_above_80th_income_percentile_difference_adj,Table A1,pipeline,6.1
-table_a1_above_80th_income_percentile_difference_adj_se,Table A1,pipeline,4.7
-table_a1_men_direct_est,Table A1,pipeline,36.9
-table_a1_men_direct_est_se,Table A1,pipeline,1.3
-table_a1_men_list_est,Table A1,pipeline,33.5
-table_a1_men_list_est_se,Table A1,pipeline,5.3
-table_a1_men_difference,Table A1,pipeline,3.5
-table_a1_men_difference_se,Table A1,pipeline,5.2
-table_a1_men_direct_est_adj,Table A1,pipeline,38.0
-table_a1_men_direct_est_adj_se,Table A1,pipeline,1.1
-table_a1_men_list_est_adj,Table A1,pipeline,33.5
-table_a1_men_list_est_adj_se,Table A1,pipeline,3.7
-table_a1_men_difference_adj,Table A1,pipeline,4.5
-table_a1_men_difference_adj_se,Table A1,pipeline,3.7
-table_a1_women_direct_est,Table A1,pipeline,28.4
-table_a1_women_direct_est_se,Table A1,pipeline,1.1
-table_a1_women_list_est,Table A1,pipeline,26.4
-table_a1_women_list_est_se,Table A1,pipeline,4.4
-table_a1_women_difference,Table A1,pipeline,2.0
-table_a1_women_difference_se,Table A1,pipeline,4.5
-table_a1_women_direct_est_adj,Table A1,pipeline,30.1
-table_a1_women_direct_est_adj_se,Table A1,pipeline,1.0
-table_a1_women_list_est_adj,Table A1,pipeline,32.7
-table_a1_women_list_est_adj_se,Table A1,pipeline,4.6
-table_a1_women_difference_adj,Table A1,pipeline,-2.6
-table_a1_women_difference_adj_se,Table A1,pipeline,4.6
-table_a1_white_direct_est,Table A1,pipeline,39.4
-table_a1_white_direct_est_se,Table A1,pipeline,1.1
-table_a1_white_list_est,Table A1,pipeline,38.0
-table_a1_white_list_est_se,Table A1,pipeline,4.1
-table_a1_white_difference,Table A1,pipeline,1.4
-table_a1_white_difference_se,Table A1,pipeline,4.1
-table_a1_white_direct_est_adj,Table A1,pipeline,39.9
-table_a1_white_direct_est_adj_se,Table A1,pipeline,0.9
-table_a1_white_list_est_adj,Table A1,pipeline,40.5
-table_a1_white_list_est_adj_se,Table A1,pipeline,3.3
-table_a1_white_difference_adj,Table A1,pipeline,-0.6
-table_a1_white_difference_adj_se,Table A1,pipeline,3.3
-table_a1_black_direct_est,Table A1,pipeline,10.3
-table_a1_black_direct_est_se,Table A1,pipeline,1.7
-table_a1_black_list_est,Table A1,pipeline,16.6
-table_a1_black_list_est_se,Table A1,pipeline,10.9
-table_a1_black_difference,Table A1,pipeline,-6.3
-table_a1_black_difference_se,Table A1,pipeline,11.0
-table_a1_black_direct_est_adj,Table A1,pipeline,11.2
-table_a1_black_direct_est_adj_se,Table A1,pipeline,1.7
-table_a1_black_list_est_adj,Table A1,pipeline,22.0
-table_a1_black_list_est_adj_se,Table A1,pipeline,9.0
-table_a1_black_difference_adj,Table A1,pipeline,-10.7
-table_a1_black_difference_adj_se,Table A1,pipeline,9.0
-table_a1_hispanic_direct_est,Table A1,pipeline,24.4
-table_a1_hispanic_direct_est_se,Table A1,pipeline,2.0
-table_a1_hispanic_list_est,Table A1,pipeline,2.8
-table_a1_hispanic_list_est_se,Table A1,pipeline,9.7
-table_a1_hispanic_difference,Table A1,pipeline,21.6
-table_a1_hispanic_difference_se,Table A1,pipeline,9.4
-table_a1_hispanic_direct_est_adj,Table A1,pipeline,26.2
-table_a1_hispanic_direct_est_adj_se,Table A1,pipeline,1.9
-table_a1_hispanic_list_est_adj,Table A1,pipeline,9.0
-table_a1_hispanic_list_est_adj_se,Table A1,pipeline,5.5
-table_a1_hispanic_difference_adj,Table A1,pipeline,17.2
-table_a1_hispanic_difference_adj_se,Table A1,pipeline,5.4
-table_a1_other_race_direct_est,Table A1,pipeline,20.3
-table_a1_other_race_direct_est_se,Table A1,pipeline,2.2
-table_a1_other_race_list_est,Table A1,pipeline,24.0
-table_a1_other_race_list_est_se,Table A1,pipeline,11.6
-table_a1_other_race_difference,Table A1,pipeline,-3.8
-table_a1_other_race_difference_se,Table A1,pipeline,11.2
-table_a1_other_race_direct_est_adj,Table A1,pipeline,20.7
-table_a1_other_race_direct_est_adj_se,Table A1,pipeline,2.2
-table_a1_other_race_list_est_adj,Table A1,pipeline,28.5
-table_a1_other_race_list_est_adj_se,Table A1,pipeline,10.1
-table_a1_other_race_difference_adj,Table A1,pipeline,-7.8
-table_a1_other_race_difference_adj_se,Table A1,pipeline,10.0
-table_a1_unlikely_voter_direct_est,Table A1,pipeline,24.2
-table_a1_unlikely_voter_direct_est_se,Table A1,pipeline,1.4
-table_a1_unlikely_voter_list_est,Table A1,pipeline,20.7
-table_a1_unlikely_voter_list_est_se,Table A1,pipeline,7.1
-table_a1_unlikely_voter_difference,Table A1,pipeline,3.5
-table_a1_unlikely_voter_difference_se,Table A1,pipeline,7.1
-table_a1_unlikely_voter_direct_est_adj,Table A1,pipeline,24.3
-table_a1_unlikely_voter_direct_est_adj_se,Table A1,pipeline,1.3
-table_a1_unlikely_voter_list_est_adj,Table A1,pipeline,24.9
-table_a1_unlikely_voter_list_est_adj_se,Table A1,pipeline,5.9
-table_a1_unlikely_voter_difference_adj,Table A1,pipeline,-0.5
-table_a1_unlikely_voter_difference_adj_se,Table A1,pipeline,5.9
-table_a1_likely_voter_direct_est,Table A1,pipeline,36.5
-table_a1_likely_voter_direct_est_se,Table A1,pipeline,1.0
-table_a1_likely_voter_list_est,Table A1,pipeline,33.6
-table_a1_likely_voter_list_est_se,Table A1,pipeline,3.7
-table_a1_likely_voter_difference,Table A1,pipeline,2.9
-table_a1_likely_voter_difference_se,Table A1,pipeline,3.7
-table_a1_likely_voter_direct_est_adj,Table A1,pipeline,37.0
-table_a1_likely_voter_direct_est_adj_se,Table A1,pipeline,0.9
-table_a1_likely_voter_list_est_adj,Table A1,pipeline,36.0
-table_a1_likely_voter_list_est_adj_se,Table A1,pipeline,2.9
-table_a1_likely_voter_difference_adj,Table A1,pipeline,1.0
-table_a1_likely_voter_difference_adj_se,Table A1,pipeline,2.8
-table_a1_entire_sample_n,Table A1,pipeline,5290
-table_a1_strong_democrat_n,Table A1,pipeline,726
-table_a1_not_very_strong_democrat_n,Table A1,pipeline,1140
-table_a1_lean_democrat_n,Table A1,pipeline,409
-table_a1_independent_n,Table A1,pipeline,1131
-table_a1_lean_republican_n,Table A1,pipeline,351
-table_a1_not_very_strong_republican_n,Table A1,pipeline,990
-table_a1_strong_republican_n,Table A1,pipeline,543
-table_a1_less_than_high_school_n,Table A1,pipeline,157
-table_a1_high_school_or_some_college_n,Table A1,pipeline,2793
-table_a1_college_n,Table A1,pipeline,1465
-table_a1_graduate_school_n,Table A1,pipeline,875
-table_a1_below_20th_income_percentile_n,Table A1,pipeline,1038
-table_a1_20th40th_income_percentile_n,Table A1,pipeline,1361
-table_a1_40th60th_income_percentile_n,Table A1,pipeline,936
-table_a1_60th80th_income_percentile_n,Table A1,pipeline,1151
-table_a1_above_80th_income_percentile_n,Table A1,pipeline,804
-table_a1_men_n,Table A1,pipeline,2332
-table_a1_women_n,Table A1,pipeline,2958
-table_a1_white_n,Table A1,pipeline,3544
-table_a1_black_n,Table A1,pipeline,446
-table_a1_hispanic_n,Table A1,pipeline,804
-table_a1_other_race_n,Table A1,pipeline,496
-table_a1_unlikely_voter_n,Table A1,pipeline,1420
-table_a1_likely_voter_n,Table A1,pipeline,3870
+claim_id,location,claim_type,claim,value_paper,digits,comparison,expect,needs_block,notes
+abstract_n_respondents,Abstract,pipeline,Respondents surveyed (abstract),5290,0,==,NA,TRUE,NA
+abstract_field_dates,Abstract,structural,"Survey field dates, September 2 to September 13, 2016",NA,NA,NA,NA,FALSE,NA
+abstract_direct_share,Abstract,pipeline,"Direct question, Trump support (%), abstract",32.5,1,==,NA,TRUE,NA
+abstract_list_estimate,Abstract,pipeline,"List experiment estimate of Trump support (%), abstract",29.6,1,==,NA,TRUE,NA
+desc_list_below_direct,Abstract,descriptive,The list experiment estimate is below the direct question estimate,NA,NA,NA,NA,TRUE,NA
+intro_wisconsin_forecast_clinton,Introduction,transcribed,"Wisconsin, forecast Clinton share (%)",49.6,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_wisconsin_forecast_trump,Introduction,transcribed,"Wisconsin, forecast Trump share (%)",44.3,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_wisconsin_actual_clinton,Introduction,transcribed,"Wisconsin, actual Clinton share (%)",46.5,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_wisconsin_actual_trump,Introduction,transcribed,"Wisconsin, actual Trump share (%)",47.2,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_wisconsin_error,Introduction,transcribed,"Wisconsin, prediction error (pp)",6,0,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_michigan_error,Introduction,transcribed,"Michigan, prediction error (pp)",4.5,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_pennsylvania_error,Introduction,transcribed,"Pennsylvania, prediction error (pp)",4.4,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_popular_vote_actual_clinton,Introduction,transcribed,"National popular vote, actual Clinton share (%)",48.0,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_popular_vote_actual_trump,Introduction,transcribed,"National popular vote, actual Trump share (%)",45.9,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_popular_vote_forecast_clinton,Introduction,transcribed,"National popular vote, forecast Clinton share (%)",48.5,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_popular_vote_forecast_trump,Introduction,transcribed,"National popular vote, forecast Trump share (%)",44.9,1,==,NA,FALSE,"Transcribed from fivethirtyeight's final pre-election forecast, the certified returns, or Dropp (2015); outside the deposited data"
+intro_dropp_mode_gap,Introduction,transcribed,Survey mode gap reported by Dropp (2015) (pp),6,0,approx,NA,FALSE,The sentence hedges: an approximately six percentage point gap
+design_n_respondents,Design,pipeline,Respondents surveyed (design),5290,0,==,NA,TRUE,NA
+design_field_dates,Design,structural,"Survey field dates, September 2 to September 13",NA,NA,NA,NA,FALSE,NA
+design_direct_share_trump,Design,pipeline,"Direct question, Trump support (%)",32.5,1,==,NA,TRUE,NA
+design_direct_share_clinton,Design,pipeline,"Direct question, Clinton support (%)",37.0,1,==,NA,TRUE,NA
+design_direct_share_other,Design,pipeline,"Direct question, other or undecided (%)",30.5,1,==,NA,TRUE,NA
+design_direct_share_restated,Design,pipeline,"Direct question, Trump support (%), restated in the design section",32.5,1,==,NA,TRUE,NA
+design_minimum_wage_item,Table 1,definitional,Minimum wage named in the first list item (dollars an hour),15,0,==,NA,FALSE,NA
+design_list_lengths,Design,definitional,List lengths: three items in the control list and four in the treatment list,NA,NA,NA,NA,FALSE,NA
+results_list_mean_control,Results,pipeline,"List experiment, control group mean (items)",1.548,3,==,NA,TRUE,NA
+results_list_mean_treatment,Results,pipeline,"List experiment, treatment group mean (items)",1.843,3,==,NA,TRUE,NA
+results_list_ate_proportion,Results,pipeline,List experiment estimate of Trump support (proportion),0.296,3,==,NA,TRUE,NA
+results_list_ate_percent,Results,pipeline,List experiment estimate of Trump support (%),29.6,1,==,NA,TRUE,NA
+results_direct_share_restated,Results,pipeline,"Direct question, Trump support (%), restated in the results section",32.5,1,==,NA,TRUE,NA
+results_direct_minus_list,Results,pipeline,Direct minus list experiment (pp),2.9,1,==,NA,TRUE,NA
+results_direct_minus_list_se,Results,pipeline,Bootstrap SE of direct minus list (pp),3.4,1,==,NA,TRUE,NA
+desc_direct_minus_list_not_significant,Results,descriptive,The difference between the two modes is not distinguishable from zero,NA,NA,NA,NA,TRUE,NA
+results_share_not_reporting_trump,Results,pipeline,Share not reporting Trump support (%),67.5,1,==,NA,TRUE,NA
+results_nondiscloser_mean_control,Results,pipeline,"Non-disclosers, control group mean (items)",1.610,3,==,NA,TRUE,NA
+results_nondiscloser_mean_treatment,Results,pipeline,"Non-disclosers, treatment group mean (items)",1.642,3,==,NA,TRUE,NA
+results_nondiscloser_list_ate,Results,pipeline,List experiment estimate among non-disclosers (%),3.3,1,==,NA,TRUE,NA
+desc_nondiscloser_not_significant,Results,descriptive,The list estimate among non-disclosers is not distinguishable from zero,NA,NA,NA,NA,TRUE,NA
+results_adjusted_range,Results,definitional,"Range a proportion falls in, 0 to 1, which the NLS estimator respects and the difference-in-means estimator does not",NA,NA,NA,NA,FALSE,NA
+results_party_id_points,Equation 1,pipeline,Points on the party identification scale entering the response model,7,0,==,NA,TRUE,NA
+results_income_points,Equation 1,pipeline,Points on the income scale entering the response model,22,0,==,NA,TRUE,NA
+results_interval_level,Results,definitional,Confidence level of the bootstrap intervals (%),95,0,==,NA,FALSE,NA
+desc_party_gradient,Results,descriptive,Democrats are unlikely and Republicans likely to support Trump,NA,NA,NA,NA,TRUE,NA
+desc_education_gradient,Results,descriptive,More educated groups support Trump less,NA,NA,NA,NA,TRUE,NA
+desc_less_than_high_school_smallest,Results,descriptive,The least educated group is the smallest and its estimates the most uncertain,NA,NA,NA,NA,TRUE,NA
+desc_income_groups_similar,Results,descriptive,Income groups did not diverge wildly in their support,NA,NA,NA,NA,TRUE,NA
+desc_gender_similar,Results,descriptive,Men and women did not diverge wildly in their support,NA,NA,NA,NA,TRUE,NA
+desc_white_highest,Results,descriptive,Whites were more likely to support Trump than any other racial or ethnic category,NA,NA,NA,NA,TRUE,NA
+desc_likely_voters_higher,Results,descriptive,Likely voters expressed higher Trump support,NA,NA,NA,NA,TRUE,NA
+desc_unadjusted_mostly_cover_zero,Results,descriptive,Most unadjusted difference intervals contain zero,NA,NA,NA,NA,TRUE,NA
+desc_adjusted_intervals_shrink,Results,descriptive,The adjusted intervals shrink substantially,NA,NA,NA,NA,TRUE,NA
+desc_adjusted_all_but_one,Results,descriptive,All but one adjusted difference interval contains zero,NA,NA,NA,NA,TRUE,NA
+results_n_subgroups,Results,pipeline,Subgroups compared,25,0,==,NA,TRUE,NA
+combined_estimate,Combined Estimate,pipeline,Combined estimate of Trump support (%),34.8,1,==,NA,TRUE,NA
+combined_estimate_se,Combined Estimate,pipeline,SE of the combined estimate (pp),2.9,1,==,NA,TRUE,NA
+combined_minus_direct,Combined Estimate,pipeline,Combined minus direct (pp),2.2,1,==,NA,TRUE,NA
+combined_minus_direct_se,Combined Estimate,pipeline,SE of combined minus direct (pp),2.9,1,==,range,TRUE,NA
+desc_combined_not_significant,Combined Estimate,descriptive,The combined estimate is not distinguishable from the direct question estimate,NA,NA,NA,NA,TRUE,NA
+combined_null_value,Combined Estimate,definitional,Value the list estimate among admitted supporters should equal under the joint test's assumptions,1,0,==,NA,FALSE,NA
+placebo_estimate,Combined Estimate,pipeline,Joint test: list estimate among admitted supporters (%),85.7,1,==,NA,TRUE,NA
+placebo_estimate_se,Combined Estimate,pipeline,Joint test: standard error (pp),5.6,1,==,NA,TRUE,NA
+placebo_null_value,Combined Estimate,definitional,Null value of the joint test (%),100,0,==,NA,FALSE,NA
+placebo_p_value,Combined Estimate,pipeline,Joint test: two-sided p-value,0.01,2,==,NA,TRUE,NA
+figure_1_axis_range,Figure 1,structural,Horizontal axis range of Figure 1,NA,NA,NA,NA,FALSE,NA
+table_2_control_list_0_items,Table 2,pipeline,"Control list, 0 items",0.11,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_control_list_1_item,Table 2,pipeline,"Control list, 1 item",0.37,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_control_list_2_items,Table 2,pipeline,"Control list, 2 items",0.40,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_control_list_3_items,Table 2,pipeline,"Control list, 3 items",0.13,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_control_list_4_items,Table 2,pipeline,"Control list, 4 items",NA,NA,NA,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_0_items,Table 2,pipeline,"Treatment list, 0 items",0.11,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_1_item,Table 2,pipeline,"Treatment list, 1 item",0.22,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_2_items,Table 2,pipeline,"Treatment list, 2 items",0.46,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_3_items,Table 2,pipeline,"Treatment list, 3 items",0.15,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_4_items,Table 2,pipeline,"Treatment list, 4 items",0.06,2,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_control_list_n,Table 2,pipeline,"Control list, N",2645,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_2_treatment_list_n,Table 2,pipeline,"Treatment list, N",2645,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_direct_est,Table A1,pipeline,"Entire sample: Direct question estimate, estimate (pp)",32.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_direct_est_se,Table A1,pipeline,"Entire sample: Direct question estimate, standard error (pp)",0.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_list_est,Table A1,pipeline,"Entire sample: List experiment estimate, estimate (pp)",29.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_list_est_se,Table A1,pipeline,"Entire sample: List experiment estimate, standard error (pp)",3.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_difference,Table A1,pipeline,"Entire sample: Difference, estimate (pp)",3.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_difference_se,Table A1,pipeline,"Entire sample: Difference, standard error (pp)",3.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_direct_est_adj,Table A1,pipeline,"Entire sample: Adjusted direct question estimate, estimate (pp)",33.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_direct_est_adj_se,Table A1,pipeline,"Entire sample: Adjusted direct question estimate, standard error (pp)",0.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_list_est_adj,Table A1,pipeline,"Entire sample: Adjusted list experiment estimate, estimate (pp)",33.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_list_est_adj_se,Table A1,pipeline,"Entire sample: Adjusted list experiment estimate, standard error (pp)",2.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_difference_adj,Table A1,pipeline,"Entire sample: Adjusted difference, estimate (pp)",0.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_difference_adj_se,Table A1,pipeline,"Entire sample: Adjusted difference, standard error (pp)",2.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_direct_est,Table A1,pipeline,"Strong democrat: Direct question estimate, estimate (pp)",4.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_direct_est_se,Table A1,pipeline,"Strong democrat: Direct question estimate, standard error (pp)",0.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_list_est,Table A1,pipeline,"Strong democrat: List experiment estimate, estimate (pp)",-4.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_list_est_se,Table A1,pipeline,"Strong democrat: List experiment estimate, standard error (pp)",7.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_difference,Table A1,pipeline,"Strong democrat: Difference, estimate (pp)",8.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_difference_se,Table A1,pipeline,"Strong democrat: Difference, standard error (pp)",7.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_direct_est_adj,Table A1,pipeline,"Strong democrat: Adjusted direct question estimate, estimate (pp)",5.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_direct_est_adj_se,Table A1,pipeline,"Strong democrat: Adjusted direct question estimate, standard error (pp)",0.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_list_est_adj,Table A1,pipeline,"Strong democrat: Adjusted list experiment estimate, estimate (pp)",0.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_list_est_adj_se,Table A1,pipeline,"Strong democrat: Adjusted list experiment estimate, standard error (pp)",2.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_difference_adj,Table A1,pipeline,"Strong democrat: Adjusted difference, estimate (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_difference_adj_se,Table A1,pipeline,"Strong democrat: Adjusted difference, standard error (pp)",2.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_direct_est,Table A1,pipeline,"Not very strong democrat: Direct question estimate, estimate (pp)",9.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_direct_est_se,Table A1,pipeline,"Not very strong democrat: Direct question estimate, standard error (pp)",1.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_list_est,Table A1,pipeline,"Not very strong democrat: List experiment estimate, estimate (pp)",5.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_list_est_se,Table A1,pipeline,"Not very strong democrat: List experiment estimate, standard error (pp)",7.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_difference,Table A1,pipeline,"Not very strong democrat: Difference, estimate (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_difference_se,Table A1,pipeline,"Not very strong democrat: Difference, standard error (pp)",6.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_direct_est_adj,Table A1,pipeline,"Not very strong democrat: Adjusted direct question estimate, estimate (pp)",8.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_direct_est_adj_se,Table A1,pipeline,"Not very strong democrat: Adjusted direct question estimate, standard error (pp)",0.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_list_est_adj,Table A1,pipeline,"Not very strong democrat: Adjusted list experiment estimate, estimate (pp)",2.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_list_est_adj_se,Table A1,pipeline,"Not very strong democrat: Adjusted list experiment estimate, standard error (pp)",3.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_difference_adj,Table A1,pipeline,"Not very strong democrat: Adjusted difference, estimate (pp)",5.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_difference_adj_se,Table A1,pipeline,"Not very strong democrat: Adjusted difference, standard error (pp)",3.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_direct_est,Table A1,pipeline,"Lean democrat: Direct question estimate, estimate (pp)",13.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_direct_est_se,Table A1,pipeline,"Lean democrat: Direct question estimate, standard error (pp)",2.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_list_est,Table A1,pipeline,"Lean democrat: List experiment estimate, estimate (pp)",8.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_list_est_se,Table A1,pipeline,"Lean democrat: List experiment estimate, standard error (pp)",11.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_difference,Table A1,pipeline,"Lean democrat: Difference, estimate (pp)",4.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_difference_se,Table A1,pipeline,"Lean democrat: Difference, standard error (pp)",11.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_direct_est_adj,Table A1,pipeline,"Lean democrat: Adjusted direct question estimate, estimate (pp)",13.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_direct_est_adj_se,Table A1,pipeline,"Lean democrat: Adjusted direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_list_est_adj,Table A1,pipeline,"Lean democrat: Adjusted list experiment estimate, estimate (pp)",7.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_list_est_adj_se,Table A1,pipeline,"Lean democrat: Adjusted list experiment estimate, standard error (pp)",5.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_difference_adj,Table A1,pipeline,"Lean democrat: Adjusted difference, estimate (pp)",5.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_difference_adj_se,Table A1,pipeline,"Lean democrat: Adjusted difference, standard error (pp)",6.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_direct_est,Table A1,pipeline,"Independent: Direct question estimate, estimate (pp)",20.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_direct_est_se,Table A1,pipeline,"Independent: Direct question estimate, standard error (pp)",1.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_list_est,Table A1,pipeline,"Independent: List experiment estimate, estimate (pp)",24.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_list_est_se,Table A1,pipeline,"Independent: List experiment estimate, standard error (pp)",8.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_difference,Table A1,pipeline,"Independent: Difference, estimate (pp)",-4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_difference_se,Table A1,pipeline,"Independent: Difference, standard error (pp)",8.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_direct_est_adj,Table A1,pipeline,"Independent: Adjusted direct question estimate, estimate (pp)",18.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_direct_est_adj_se,Table A1,pipeline,"Independent: Adjusted direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_list_est_adj,Table A1,pipeline,"Independent: Adjusted list experiment estimate, estimate (pp)",26.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_list_est_adj_se,Table A1,pipeline,"Independent: Adjusted list experiment estimate, standard error (pp)",6.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_difference_adj,Table A1,pipeline,"Independent: Adjusted difference, estimate (pp)",-7.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_difference_adj_se,Table A1,pipeline,"Independent: Adjusted difference, standard error (pp)",6.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_direct_est,Table A1,pipeline,"Lean republican: Direct question estimate, estimate (pp)",73.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_direct_est_se,Table A1,pipeline,"Lean republican: Direct question estimate, standard error (pp)",2.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_list_est,Table A1,pipeline,"Lean republican: List experiment estimate, estimate (pp)",55.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_list_est_se,Table A1,pipeline,"Lean republican: List experiment estimate, standard error (pp)",11.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_difference,Table A1,pipeline,"Lean republican: Difference, estimate (pp)",17.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_difference_se,Table A1,pipeline,"Lean republican: Difference, standard error (pp)",11.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_direct_est_adj,Table A1,pipeline,"Lean republican: Adjusted direct question estimate, estimate (pp)",59.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_direct_est_adj_se,Table A1,pipeline,"Lean republican: Adjusted direct question estimate, standard error (pp)",2.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_list_est_adj,Table A1,pipeline,"Lean republican: Adjusted list experiment estimate, estimate (pp)",48.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_list_est_adj_se,Table A1,pipeline,"Lean republican: Adjusted list experiment estimate, standard error (pp)",12.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_difference_adj,Table A1,pipeline,"Lean republican: Adjusted difference, estimate (pp)",11.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_difference_adj_se,Table A1,pipeline,"Lean republican: Adjusted difference, standard error (pp)",12.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_direct_est,Table A1,pipeline,"Not very strong republican: Direct question estimate, estimate (pp)",68.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_direct_est_se,Table A1,pipeline,"Not very strong republican: Direct question estimate, standard error (pp)",1.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_list_est,Table A1,pipeline,"Not very strong republican: List experiment estimate, estimate (pp)",72.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_list_est_se,Table A1,pipeline,"Not very strong republican: List experiment estimate, standard error (pp)",8.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_difference,Table A1,pipeline,"Not very strong republican: Difference, estimate (pp)",-4.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_difference_se,Table A1,pipeline,"Not very strong republican: Difference, standard error (pp)",8.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_direct_est_adj,Table A1,pipeline,"Not very strong republican: Adjusted direct question estimate, estimate (pp)",72.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_direct_est_adj_se,Table A1,pipeline,"Not very strong republican: Adjusted direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_list_est_adj,Table A1,pipeline,"Not very strong republican: Adjusted list experiment estimate, estimate (pp)",73.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_list_est_adj_se,Table A1,pipeline,"Not very strong republican: Adjusted list experiment estimate, standard error (pp)",6.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_difference_adj,Table A1,pipeline,"Not very strong republican: Adjusted difference, estimate (pp)",-0.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_difference_adj_se,Table A1,pipeline,"Not very strong republican: Adjusted difference, standard error (pp)",6.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_direct_est,Table A1,pipeline,"Strong republican: Direct question estimate, estimate (pp)",90.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_direct_est_se,Table A1,pipeline,"Strong republican: Direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_list_est,Table A1,pipeline,"Strong republican: List experiment estimate, estimate (pp)",80.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_list_est_se,Table A1,pipeline,"Strong republican: List experiment estimate, standard error (pp)",9.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_difference,Table A1,pipeline,"Strong republican: Difference, estimate (pp)",9.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_difference_se,Table A1,pipeline,"Strong republican: Difference, standard error (pp)",9.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_direct_est_adj,Table A1,pipeline,"Strong republican: Adjusted direct question estimate, estimate (pp)",84.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_direct_est_adj_se,Table A1,pipeline,"Strong republican: Adjusted direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_list_est_adj,Table A1,pipeline,"Strong republican: Adjusted list experiment estimate, estimate (pp)",89.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_list_est_adj_se,Table A1,pipeline,"Strong republican: Adjusted list experiment estimate, standard error (pp)",6.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_difference_adj,Table A1,pipeline,"Strong republican: Adjusted difference, estimate (pp)",-5.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_difference_adj_se,Table A1,pipeline,"Strong republican: Adjusted difference, standard error (pp)",6.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_direct_est,Table A1,pipeline,"Less than high school: Direct question estimate, estimate (pp)",30.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_direct_est_se,Table A1,pipeline,"Less than high school: Direct question estimate, standard error (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_list_est,Table A1,pipeline,"Less than high school: List experiment estimate, estimate (pp)",-4.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_list_est_se,Table A1,pipeline,"Less than high school: List experiment estimate, standard error (pp)",18.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_difference,Table A1,pipeline,"Less than high school: Difference, estimate (pp)",35.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_difference_se,Table A1,pipeline,"Less than high school: Difference, standard error (pp)",18.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_direct_est_adj,Table A1,pipeline,"Less than high school: Adjusted direct question estimate, estimate (pp)",33.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_direct_est_adj_se,Table A1,pipeline,"Less than high school: Adjusted direct question estimate, standard error (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_list_est_adj,Table A1,pipeline,"Less than high school: Adjusted list experiment estimate, estimate (pp)",15.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_list_est_adj_se,Table A1,pipeline,"Less than high school: Adjusted list experiment estimate, standard error (pp)",9.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_difference_adj,Table A1,pipeline,"Less than high school: Adjusted difference, estimate (pp)",18.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_difference_adj_se,Table A1,pipeline,"Less than high school: Adjusted difference, standard error (pp)",9.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_direct_est,Table A1,pipeline,"High school or some college: Direct question estimate, estimate (pp)",34.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_direct_est_se,Table A1,pipeline,"High school or some college: Direct question estimate, standard error (pp)",1.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_list_est,Table A1,pipeline,"High school or some college: List experiment estimate, estimate (pp)",35.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_list_est_se,Table A1,pipeline,"High school or some college: List experiment estimate, standard error (pp)",4.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_difference,Table A1,pipeline,"High school or some college: Difference, estimate (pp)",-1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_difference_se,Table A1,pipeline,"High school or some college: Difference, standard error (pp)",4.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_direct_est_adj,Table A1,pipeline,"High school or some college: Adjusted direct question estimate, estimate (pp)",36.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_direct_est_adj_se,Table A1,pipeline,"High school or some college: Adjusted direct question estimate, standard error (pp)",1.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_list_est_adj,Table A1,pipeline,"High school or some college: Adjusted list experiment estimate, estimate (pp)",36.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_list_est_adj_se,Table A1,pipeline,"High school or some college: Adjusted list experiment estimate, standard error (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_difference_adj,Table A1,pipeline,"High school or some college: Adjusted difference, estimate (pp)",-0.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_difference_adj_se,Table A1,pipeline,"High school or some college: Adjusted difference, standard error (pp)",4.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_direct_est,Table A1,pipeline,"College: Direct question estimate, estimate (pp)",30.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_direct_est_se,Table A1,pipeline,"College: Direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_list_est,Table A1,pipeline,"College: List experiment estimate, estimate (pp)",27.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_list_est_se,Table A1,pipeline,"College: List experiment estimate, standard error (pp)",5.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_difference,Table A1,pipeline,"College: Difference, estimate (pp)",2.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_difference_se,Table A1,pipeline,"College: Difference, standard error (pp)",5.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_direct_est_adj,Table A1,pipeline,"College: Adjusted direct question estimate, estimate (pp)",32.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_direct_est_adj_se,Table A1,pipeline,"College: Adjusted direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_list_est_adj,Table A1,pipeline,"College: Adjusted list experiment estimate, estimate (pp)",35.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_list_est_adj_se,Table A1,pipeline,"College: Adjusted list experiment estimate, standard error (pp)",4.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_difference_adj,Table A1,pipeline,"College: Adjusted difference, estimate (pp)",-3.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_difference_adj_se,Table A1,pipeline,"College: Adjusted difference, standard error (pp)",4.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_direct_est,Table A1,pipeline,"Graduate school: Direct question estimate, estimate (pp)",25.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_direct_est_se,Table A1,pipeline,"Graduate school: Direct question estimate, standard error (pp)",1.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_list_est,Table A1,pipeline,"Graduate school: List experiment estimate, estimate (pp)",10.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_list_est_se,Table A1,pipeline,"Graduate school: List experiment estimate, standard error (pp)",6.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_difference,Table A1,pipeline,"Graduate school: Difference, estimate (pp)",14.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_difference_se,Table A1,pipeline,"Graduate school: Difference, standard error (pp)",6.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_direct_est_adj,Table A1,pipeline,"Graduate school: Adjusted direct question estimate, estimate (pp)",27.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_direct_est_adj_se,Table A1,pipeline,"Graduate school: Adjusted direct question estimate, standard error (pp)",1.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_list_est_adj,Table A1,pipeline,"Graduate school: Adjusted list experiment estimate, estimate (pp)",20.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_list_est_adj_se,Table A1,pipeline,"Graduate school: Adjusted list experiment estimate, standard error (pp)",4.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_difference_adj,Table A1,pipeline,"Graduate school: Adjusted difference, estimate (pp)",6.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_difference_adj_se,Table A1,pipeline,"Graduate school: Adjusted difference, standard error (pp)",4.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_direct_est,Table A1,pipeline,"Below 20th income percentile: Direct question estimate, estimate (pp)",30.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_direct_est_se,Table A1,pipeline,"Below 20th income percentile: Direct question estimate, standard error (pp)",1.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_list_est,Table A1,pipeline,"Below 20th income percentile: List experiment estimate, estimate (pp)",15.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_list_est_se,Table A1,pipeline,"Below 20th income percentile: List experiment estimate, standard error (pp)",8.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_difference,Table A1,pipeline,"Below 20th income percentile: Difference, estimate (pp)",15.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_difference_se,Table A1,pipeline,"Below 20th income percentile: Difference, standard error (pp)",7.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_direct_est_adj,Table A1,pipeline,"Below 20th income percentile: Adjusted direct question estimate, estimate (pp)",33.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_direct_est_adj_se,Table A1,pipeline,"Below 20th income percentile: Adjusted direct question estimate, standard error (pp)",1.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_list_est_adj,Table A1,pipeline,"Below 20th income percentile: Adjusted list experiment estimate, estimate (pp)",31.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_list_est_adj_se,Table A1,pipeline,"Below 20th income percentile: Adjusted list experiment estimate, standard error (pp)",4.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_difference_adj,Table A1,pipeline,"Below 20th income percentile: Adjusted difference, estimate (pp)",2.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_difference_adj_se,Table A1,pipeline,"Below 20th income percentile: Adjusted difference, standard error (pp)",3.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_direct_est,Table A1,pipeline,"20th-40th income percentile: Direct question estimate, estimate (pp)",36.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_direct_est_se,Table A1,pipeline,"20th-40th income percentile: Direct question estimate, standard error (pp)",1.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_list_est,Table A1,pipeline,"20th-40th income percentile: List experiment estimate, estimate (pp)",38.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_list_est_se,Table A1,pipeline,"20th-40th income percentile: List experiment estimate, standard error (pp)",6.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_difference,Table A1,pipeline,"20th-40th income percentile: Difference, estimate (pp)",-1.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_difference_se,Table A1,pipeline,"20th-40th income percentile: Difference, standard error (pp)",6.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_direct_est_adj,Table A1,pipeline,"20th-40th income percentile: Adjusted direct question estimate, estimate (pp)",35.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_direct_est_adj_se,Table A1,pipeline,"20th-40th income percentile: Adjusted direct question estimate, standard error (pp)",1.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_list_est_adj,Table A1,pipeline,"20th-40th income percentile: Adjusted list experiment estimate, estimate (pp)",34.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_list_est_adj_se,Table A1,pipeline,"20th-40th income percentile: Adjusted list experiment estimate, standard error (pp)",2.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_difference_adj,Table A1,pipeline,"20th-40th income percentile: Adjusted difference, estimate (pp)",0.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_difference_adj_se,Table A1,pipeline,"20th-40th income percentile: Adjusted difference, standard error (pp)",2.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_direct_est,Table A1,pipeline,"40th-60th income percentile: Direct question estimate, estimate (pp)",34.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_direct_est_se,Table A1,pipeline,"40th-60th income percentile: Direct question estimate, standard error (pp)",2.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_list_est,Table A1,pipeline,"40th-60th income percentile: List experiment estimate, estimate (pp)",19.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_list_est_se,Table A1,pipeline,"40th-60th income percentile: List experiment estimate, standard error (pp)",7.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_difference,Table A1,pipeline,"40th-60th income percentile: Difference, estimate (pp)",14.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_difference_se,Table A1,pipeline,"40th-60th income percentile: Difference, standard error (pp)",7.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_direct_est_adj,Table A1,pipeline,"40th-60th income percentile: Adjusted direct question estimate, estimate (pp)",34.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_direct_est_adj_se,Table A1,pipeline,"40th-60th income percentile: Adjusted direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_list_est_adj,Table A1,pipeline,"40th-60th income percentile: Adjusted list experiment estimate, estimate (pp)",34.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_list_est_adj_se,Table A1,pipeline,"40th-60th income percentile: Adjusted list experiment estimate, standard error (pp)",3.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_difference_adj,Table A1,pipeline,"40th-60th income percentile: Adjusted difference, estimate (pp)",-0.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_difference_adj_se,Table A1,pipeline,"40th-60th income percentile: Adjusted difference, standard error (pp)",3.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_direct_est,Table A1,pipeline,"60th-80th income percentile: Direct question estimate, estimate (pp)",33.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_direct_est_se,Table A1,pipeline,"60th-80th income percentile: Direct question estimate, standard error (pp)",1.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_list_est,Table A1,pipeline,"60th-80th income percentile: List experiment estimate, estimate (pp)",40.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_list_est_se,Table A1,pipeline,"60th-80th income percentile: List experiment estimate, standard error (pp)",7.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_difference,Table A1,pipeline,"60th-80th income percentile: Difference, estimate (pp)",-6.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_difference_se,Table A1,pipeline,"60th-80th income percentile: Difference, standard error (pp)",7.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_direct_est_adj,Table A1,pipeline,"60th-80th income percentile: Adjusted direct question estimate, estimate (pp)",35.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_direct_est_adj_se,Table A1,pipeline,"60th-80th income percentile: Adjusted direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_list_est_adj,Table A1,pipeline,"60th-80th income percentile: Adjusted list experiment estimate, estimate (pp)",39.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_list_est_adj_se,Table A1,pipeline,"60th-80th income percentile: Adjusted list experiment estimate, standard error (pp)",5.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_difference_adj,Table A1,pipeline,"60th-80th income percentile: Adjusted difference, estimate (pp)",-4.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_difference_adj_se,Table A1,pipeline,"60th-80th income percentile: Adjusted difference, standard error (pp)",4.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_direct_est,Table A1,pipeline,"Above 80th income percentile: Direct question estimate, estimate (pp)",27.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_direct_est_se,Table A1,pipeline,"Above 80th income percentile: Direct question estimate, standard error (pp)",2.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_list_est,Table A1,pipeline,"Above 80th income percentile: List experiment estimate, estimate (pp)",30.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_list_est_se,Table A1,pipeline,"Above 80th income percentile: List experiment estimate, standard error (pp)",8.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_difference,Table A1,pipeline,"Above 80th income percentile: Difference, estimate (pp)",-3.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_difference_se,Table A1,pipeline,"Above 80th income percentile: Difference, standard error (pp)",9.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_direct_est_adj,Table A1,pipeline,"Above 80th income percentile: Adjusted direct question estimate, estimate (pp)",27.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_direct_est_adj_se,Table A1,pipeline,"Above 80th income percentile: Adjusted direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_list_est_adj,Table A1,pipeline,"Above 80th income percentile: Adjusted list experiment estimate, estimate (pp)",21.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_list_est_adj_se,Table A1,pipeline,"Above 80th income percentile: Adjusted list experiment estimate, standard error (pp)",4.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_difference_adj,Table A1,pipeline,"Above 80th income percentile: Adjusted difference, estimate (pp)",6.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_difference_adj_se,Table A1,pipeline,"Above 80th income percentile: Adjusted difference, standard error (pp)",4.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_direct_est,Table A1,pipeline,"Men: Direct question estimate, estimate (pp)",36.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_direct_est_se,Table A1,pipeline,"Men: Direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_list_est,Table A1,pipeline,"Men: List experiment estimate, estimate (pp)",33.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_list_est_se,Table A1,pipeline,"Men: List experiment estimate, standard error (pp)",5.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_difference,Table A1,pipeline,"Men: Difference, estimate (pp)",3.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_difference_se,Table A1,pipeline,"Men: Difference, standard error (pp)",5.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_direct_est_adj,Table A1,pipeline,"Men: Adjusted direct question estimate, estimate (pp)",38.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_direct_est_adj_se,Table A1,pipeline,"Men: Adjusted direct question estimate, standard error (pp)",1.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_list_est_adj,Table A1,pipeline,"Men: Adjusted list experiment estimate, estimate (pp)",33.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_list_est_adj_se,Table A1,pipeline,"Men: Adjusted list experiment estimate, standard error (pp)",3.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_difference_adj,Table A1,pipeline,"Men: Adjusted difference, estimate (pp)",4.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_difference_adj_se,Table A1,pipeline,"Men: Adjusted difference, standard error (pp)",3.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_direct_est,Table A1,pipeline,"Women: Direct question estimate, estimate (pp)",28.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_direct_est_se,Table A1,pipeline,"Women: Direct question estimate, standard error (pp)",1.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_list_est,Table A1,pipeline,"Women: List experiment estimate, estimate (pp)",26.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_list_est_se,Table A1,pipeline,"Women: List experiment estimate, standard error (pp)",4.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_difference,Table A1,pipeline,"Women: Difference, estimate (pp)",2.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_difference_se,Table A1,pipeline,"Women: Difference, standard error (pp)",4.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_direct_est_adj,Table A1,pipeline,"Women: Adjusted direct question estimate, estimate (pp)",30.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_direct_est_adj_se,Table A1,pipeline,"Women: Adjusted direct question estimate, standard error (pp)",1.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_list_est_adj,Table A1,pipeline,"Women: Adjusted list experiment estimate, estimate (pp)",32.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_list_est_adj_se,Table A1,pipeline,"Women: Adjusted list experiment estimate, standard error (pp)",4.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_difference_adj,Table A1,pipeline,"Women: Adjusted difference, estimate (pp)",-2.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_difference_adj_se,Table A1,pipeline,"Women: Adjusted difference, standard error (pp)",4.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_direct_est,Table A1,pipeline,"White: Direct question estimate, estimate (pp)",39.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_direct_est_se,Table A1,pipeline,"White: Direct question estimate, standard error (pp)",1.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_list_est,Table A1,pipeline,"White: List experiment estimate, estimate (pp)",38.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_list_est_se,Table A1,pipeline,"White: List experiment estimate, standard error (pp)",4.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_difference,Table A1,pipeline,"White: Difference, estimate (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_difference_se,Table A1,pipeline,"White: Difference, standard error (pp)",4.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_direct_est_adj,Table A1,pipeline,"White: Adjusted direct question estimate, estimate (pp)",39.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_direct_est_adj_se,Table A1,pipeline,"White: Adjusted direct question estimate, standard error (pp)",0.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_list_est_adj,Table A1,pipeline,"White: Adjusted list experiment estimate, estimate (pp)",40.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_list_est_adj_se,Table A1,pipeline,"White: Adjusted list experiment estimate, standard error (pp)",3.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_difference_adj,Table A1,pipeline,"White: Adjusted difference, estimate (pp)",-0.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_difference_adj_se,Table A1,pipeline,"White: Adjusted difference, standard error (pp)",3.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_direct_est,Table A1,pipeline,"Black: Direct question estimate, estimate (pp)",10.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_direct_est_se,Table A1,pipeline,"Black: Direct question estimate, standard error (pp)",1.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_list_est,Table A1,pipeline,"Black: List experiment estimate, estimate (pp)",16.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_list_est_se,Table A1,pipeline,"Black: List experiment estimate, standard error (pp)",10.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_difference,Table A1,pipeline,"Black: Difference, estimate (pp)",-6.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_difference_se,Table A1,pipeline,"Black: Difference, standard error (pp)",11.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_direct_est_adj,Table A1,pipeline,"Black: Adjusted direct question estimate, estimate (pp)",11.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_direct_est_adj_se,Table A1,pipeline,"Black: Adjusted direct question estimate, standard error (pp)",1.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_list_est_adj,Table A1,pipeline,"Black: Adjusted list experiment estimate, estimate (pp)",22.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_list_est_adj_se,Table A1,pipeline,"Black: Adjusted list experiment estimate, standard error (pp)",9.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_difference_adj,Table A1,pipeline,"Black: Adjusted difference, estimate (pp)",-10.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_difference_adj_se,Table A1,pipeline,"Black: Adjusted difference, standard error (pp)",9.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_direct_est,Table A1,pipeline,"Hispanic: Direct question estimate, estimate (pp)",24.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_direct_est_se,Table A1,pipeline,"Hispanic: Direct question estimate, standard error (pp)",2.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_list_est,Table A1,pipeline,"Hispanic: List experiment estimate, estimate (pp)",2.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_list_est_se,Table A1,pipeline,"Hispanic: List experiment estimate, standard error (pp)",9.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_difference,Table A1,pipeline,"Hispanic: Difference, estimate (pp)",21.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_difference_se,Table A1,pipeline,"Hispanic: Difference, standard error (pp)",9.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_direct_est_adj,Table A1,pipeline,"Hispanic: Adjusted direct question estimate, estimate (pp)",26.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_direct_est_adj_se,Table A1,pipeline,"Hispanic: Adjusted direct question estimate, standard error (pp)",1.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_list_est_adj,Table A1,pipeline,"Hispanic: Adjusted list experiment estimate, estimate (pp)",9.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_list_est_adj_se,Table A1,pipeline,"Hispanic: Adjusted list experiment estimate, standard error (pp)",5.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_difference_adj,Table A1,pipeline,"Hispanic: Adjusted difference, estimate (pp)",17.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_difference_adj_se,Table A1,pipeline,"Hispanic: Adjusted difference, standard error (pp)",5.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_direct_est,Table A1,pipeline,"Other race: Direct question estimate, estimate (pp)",20.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_direct_est_se,Table A1,pipeline,"Other race: Direct question estimate, standard error (pp)",2.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_list_est,Table A1,pipeline,"Other race: List experiment estimate, estimate (pp)",24.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_list_est_se,Table A1,pipeline,"Other race: List experiment estimate, standard error (pp)",11.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_difference,Table A1,pipeline,"Other race: Difference, estimate (pp)",-3.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_difference_se,Table A1,pipeline,"Other race: Difference, standard error (pp)",11.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_direct_est_adj,Table A1,pipeline,"Other race: Adjusted direct question estimate, estimate (pp)",20.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_direct_est_adj_se,Table A1,pipeline,"Other race: Adjusted direct question estimate, standard error (pp)",2.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_list_est_adj,Table A1,pipeline,"Other race: Adjusted list experiment estimate, estimate (pp)",28.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_list_est_adj_se,Table A1,pipeline,"Other race: Adjusted list experiment estimate, standard error (pp)",10.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_difference_adj,Table A1,pipeline,"Other race: Adjusted difference, estimate (pp)",-7.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_difference_adj_se,Table A1,pipeline,"Other race: Adjusted difference, standard error (pp)",10.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_direct_est,Table A1,pipeline,"Unlikely voter: Direct question estimate, estimate (pp)",24.2,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_direct_est_se,Table A1,pipeline,"Unlikely voter: Direct question estimate, standard error (pp)",1.4,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_list_est,Table A1,pipeline,"Unlikely voter: List experiment estimate, estimate (pp)",20.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_list_est_se,Table A1,pipeline,"Unlikely voter: List experiment estimate, standard error (pp)",7.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_difference,Table A1,pipeline,"Unlikely voter: Difference, estimate (pp)",3.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_difference_se,Table A1,pipeline,"Unlikely voter: Difference, standard error (pp)",7.1,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_direct_est_adj,Table A1,pipeline,"Unlikely voter: Adjusted direct question estimate, estimate (pp)",24.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_direct_est_adj_se,Table A1,pipeline,"Unlikely voter: Adjusted direct question estimate, standard error (pp)",1.3,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_list_est_adj,Table A1,pipeline,"Unlikely voter: Adjusted list experiment estimate, estimate (pp)",24.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_list_est_adj_se,Table A1,pipeline,"Unlikely voter: Adjusted list experiment estimate, standard error (pp)",5.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_difference_adj,Table A1,pipeline,"Unlikely voter: Adjusted difference, estimate (pp)",-0.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_difference_adj_se,Table A1,pipeline,"Unlikely voter: Adjusted difference, standard error (pp)",5.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_direct_est,Table A1,pipeline,"Likely voter: Direct question estimate, estimate (pp)",36.5,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_direct_est_se,Table A1,pipeline,"Likely voter: Direct question estimate, standard error (pp)",1.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_list_est,Table A1,pipeline,"Likely voter: List experiment estimate, estimate (pp)",33.6,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_list_est_se,Table A1,pipeline,"Likely voter: List experiment estimate, standard error (pp)",3.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_difference,Table A1,pipeline,"Likely voter: Difference, estimate (pp)",2.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_difference_se,Table A1,pipeline,"Likely voter: Difference, standard error (pp)",3.7,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_direct_est_adj,Table A1,pipeline,"Likely voter: Adjusted direct question estimate, estimate (pp)",37.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_direct_est_adj_se,Table A1,pipeline,"Likely voter: Adjusted direct question estimate, standard error (pp)",0.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_list_est_adj,Table A1,pipeline,"Likely voter: Adjusted list experiment estimate, estimate (pp)",36.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_list_est_adj_se,Table A1,pipeline,"Likely voter: Adjusted list experiment estimate, standard error (pp)",2.9,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_difference_adj,Table A1,pipeline,"Likely voter: Adjusted difference, estimate (pp)",1.0,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_difference_adj_se,Table A1,pipeline,"Likely voter: Adjusted difference, standard error (pp)",2.8,1,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_entire_sample_n,Table A1,pipeline,Entire sample: N,5290,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_democrat_n,Table A1,pipeline,Strong democrat: N,726,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_democrat_n,Table A1,pipeline,Not very strong democrat: N,1140,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_democrat_n,Table A1,pipeline,Lean democrat: N,409,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_independent_n,Table A1,pipeline,Independent: N,1131,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_lean_republican_n,Table A1,pipeline,Lean republican: N,351,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_not_very_strong_republican_n,Table A1,pipeline,Not very strong republican: N,990,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_strong_republican_n,Table A1,pipeline,Strong republican: N,543,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_less_than_high_school_n,Table A1,pipeline,Less than high school: N,157,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_high_school_or_some_college_n,Table A1,pipeline,High school or some college: N,2793,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_college_n,Table A1,pipeline,College: N,1465,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_graduate_school_n,Table A1,pipeline,Graduate school: N,875,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_below_20th_income_percentile_n,Table A1,pipeline,Below 20th income percentile: N,1038,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_20th40th_income_percentile_n,Table A1,pipeline,20th-40th income percentile: N,1361,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_40th60th_income_percentile_n,Table A1,pipeline,40th-60th income percentile: N,936,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_60th80th_income_percentile_n,Table A1,pipeline,60th-80th income percentile: N,1151,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_above_80th_income_percentile_n,Table A1,pipeline,Above 80th income percentile: N,804,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_men_n,Table A1,pipeline,Men: N,2332,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_women_n,Table A1,pipeline,Women: N,2958,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_white_n,Table A1,pipeline,White: N,3544,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_black_n,Table A1,pipeline,Black: N,446,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_hispanic_n,Table A1,pipeline,Hispanic: N,804,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_other_race_n,Table A1,pipeline,Other race: N,496,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_unlikely_voter_n,Table A1,pipeline,Unlikely voter: N,1420,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"
+table_a1_likely_voter_n,Table A1,pipeline,Likely voter: N,3870,0,==,NA,FALSE,"Float cell, checked cell by cell in build_ground_truth.R"

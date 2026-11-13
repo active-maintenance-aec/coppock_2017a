@@ -1,0 +1,5 @@
+run_id,pass,sims,sampler,warning_blocks,minutes
+current,stripped,2000,current,4,15.528444317976634
+rounding,stripped,2000,rounding,4,10.992424317200978
+shipped,stripped,200,current,5,1.1551422158877054
+shipped_as_deposited,as_shipped,200,current,5,1.157301700115204

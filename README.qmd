@@ -45,14 +45,19 @@ sampler_comparison <- read_csv(here::here("ground_truth", "sampler_comparison.cs
 rewrite_vs_archive <- read_csv(here::here("ground_truth", "rewrite_vs_archive.csv"),
                                show_col_types = FALSE)
 
-# The two file-list columns are empty whenever a run left nothing behind and
-# overwrote nothing, which is the good case and the usual one. Guessed, an empty
-# column parses as logical and every later string operation on it fails, so both
-# are read as text.
-archive_runs <- read_csv(here::here("ground_truth", "original_archive_runs.csv"),
-                         col_types = cols(stray_files_written = col_character(),
-                                          deposited_files_overwritten = col_character(),
-                                          .default = col_guess()))
+# The archive record: one row per pass in archive_run_status.csv, one row per file
+# a pass added or wrote over in archive_overwrites.csv, and the four configurations
+# the deposited script is run in, with what each cost, in
+# original_archive_configurations.csv. stopped_at and file are read as text
+# because a column that is empty in the good case parses as logical when guessed.
+archive_status <- read_csv(here::here("ground_truth", "archive_run_status.csv"),
+                           col_types = cols(stopped_at = col_character(),
+                                            .default = col_guess()))
+archive_overwrites <- read_csv(here::here("ground_truth", "archive_overwrites.csv"),
+                               col_types = cols(file = col_character(),
+                                                .default = col_guess()))
+archive_runs <- read_csv(here::here("ground_truth", "original_archive_configurations.csv"),
+                         show_col_types = FALSE)
 
 figure_1 <- read_csv(
   here::here("maintained", "output", "figure_1_direct_vs_list_estimates.csv"),
@@ -152,29 +157,41 @@ The run that produced the committed output took `r formatC(sum(run_timings$minut
 # Summary
 
 ```{r summary_setup, include=FALSE}
+# The ground truth names where a claim is printed (location) and what kind of claim
+# it is (claim_type). The summaries below group by block, which rebuilds the five
+# groups the report has always used from those two columns, and read a single
+# verdict, which is match_rewrite for a number and holds for a sentence about shape.
 gt <- gt |>
   mutate(
+    block = case_when(
+      location == "Table A1" ~ "Figure 1 and Table A1",
+      location == "Table 2" ~ "Table 2",
+      claim_type == "descriptive" ~ "Descriptive",
+      claim_type == "transcribed" ~ "External to the data",
+      .default = "In-text"
+    ),
+    rewrite_verdict = coalesce(match_rewrite, holds),
     is_se = str_detect(claim, "standard error \\(pp\\)$") | str_detect(claim, "\\bSE\\b"),
     is_income = str_detect(claim, "income percentile")
   )
 
 n_claims <- nrow(gt)
-n_external <- sum(gt$table_figure == "External to the data")
-n_rewrite_checkable <- sum(!is.na(gt$match_rewrite))
-n_rewrite_match <- sum(gt$match_rewrite == 1, na.rm = TRUE)
+n_external <- sum(gt$block == "External to the data")
+n_rewrite_checkable <- sum(!is.na(gt$rewrite_verdict))
+n_rewrite_match <- sum(gt$rewrite_verdict == 1, na.rm = TRUE)
 
 errata_rows <- gt |> filter(str_detect(notes, "^Errata"))
 errata_point_rows <- errata_rows |> filter(!is_se)
 
-point_rows <- gt |> filter(!is_se, !is.na(match_rewrite), table_figure != "Descriptive")
-point_mismatch <- point_rows |> filter(match_rewrite == 0, !is_income)
+point_rows <- gt |> filter(!is_se, !is.na(rewrite_verdict), block != "Descriptive")
+point_mismatch <- point_rows |> filter(rewrite_verdict == 0, !is_income)
 
-se_rows <- gt |> filter(is_se, !is_income, !is.na(match_rewrite))
-se_match <- sum(se_rows$match_rewrite == 1)
+se_rows <- gt |> filter(is_se, !is_income, !is.na(rewrite_verdict))
+se_match <- sum(se_rows$rewrite_verdict == 1)
 se_match_archive <- sum(se_rows$match == 1, na.rm = TRUE)
 
-descriptive_rows <- gt |> filter(table_figure == "Descriptive")
-descriptive_with_verdict <- descriptive_rows |> filter(!is.na(match_rewrite))
+descriptive_rows <- gt |> filter(block == "Descriptive")
+descriptive_with_verdict <- descriptive_rows |> filter(!is.na(rewrite_verdict))
 
 published_claims <- read_csv(here::here("ground_truth", "published_claims.csv"),
                              col_types = cols(.default = col_character()))
@@ -184,7 +201,7 @@ Two questions, answered before the detail.
 
 ## Does the deposited archive run?
 
-Yes. The deposit is a single script, `shy_trump_analysis.r`, and it runs start to finish under R `r paste(R.version$major, R.version$minor, sep = ".")` with no change to any line of analysis. All `r nrow(archive_runs)` runs of it recorded in `ground_truth/original_archive_runs.csv` completed, with deprecation warnings and no errors. One dependency is missing from its own commented `install.packages()` line, which names seven packages: the script also calls `arm::invlogit()`, namespace-qualified, so `arm` has to be installed and is never named. Every other package the script needs is on that line and every one of them installs and runs today, including `coefplot`, which supplies the `position_dodgev()` behind the figure.
+Yes. The deposit is a single script, `shy_trump_analysis.r`, and it runs start to finish under R `r paste(R.version$major, R.version$minor, sep = ".")` with no change to any line of analysis. All `r nrow(archive_runs)` runs of it completed, with deprecation warnings and no errors; `ground_truth/archive_run_status.csv` records both of its passes, stripped to code and data and as shipped, as `r combine_words(unique(archive_status$outcome))`. One dependency is missing from its own commented `install.packages()` line, which names seven packages: the script also calls `arm::invlogit()`, namespace-qualified, so `arm` has to be installed and is never named. Every other package the script needs is on that line and every one of them installs and runs today, including `coefplot`, which supplies the `position_dodgev()` behind the figure.
 
 Three things about the deposit matter more than whether it executes.
 
@@ -204,7 +221,7 @@ Of `r n_claims` recorded claims, `r n_external` are numbers the article takes fr
 
 **Bootstrap standard errors.** `r nrow(se_rows)` are checked, leaving the income rows aside, and the rewrite matches `r se_match`. The deposited script does neither better nor worse: it matches `r se_match_archive` of the same `r nrow(se_rows)`, and the two draw the same bootstrap, cell for cell. The reason is given in the deposit's own header. The resampling code was rewritten in October 2019, two years after publication, when tidyverse bootstrapping moved to `rsample`, so the code that produced the published standard errors is not the code in the archive. No configuration of what is there recovers them, including the sampler R used before version 3.6.0. Every substantive conclusion in the article turns on whether an interval covers zero, and every one of those is unchanged.
 
-**Sentences with no number in them.** `r nrow(descriptive_rows)` of the article's claims are about the shape, sign or count of its own estimates rather than about a value: that Whites were more likely to support Trump than any other category, that most of the unadjusted intervals contain zero, that the income groups did not diverge wildly. Nothing in a number-by-number comparison reaches them, and they are where a description can go on standing after the estimate beside it has moved. `r nrow(descriptive_with_verdict)` of the `r nrow(descriptive_rows)` reduce to a verdict, and `r sum(descriptive_with_verdict$match_rewrite == 1)` of those hold. The remaining `r nrow(descriptive_rows) - nrow(descriptive_with_verdict)` name no threshold, so they get their evidence printed and no verdict.
+**Sentences with no number in them.** `r nrow(descriptive_rows)` of the article's claims are about the shape, sign or count of its own estimates rather than about a value: that Whites were more likely to support Trump than any other category, that most of the unadjusted intervals contain zero, that the income groups did not diverge wildly. Nothing in a number-by-number comparison reaches them, and they are where a description can go on standing after the estimate beside it has moved. `r nrow(descriptive_with_verdict)` of the `r nrow(descriptive_rows)` reduce to a verdict, and `r sum(descriptive_with_verdict$rewrite_verdict == 1)` of those hold. The remaining `r nrow(descriptive_rows) - nrow(descriptive_with_verdict)` name no threshold, so they get their evidence printed and no verdict.
 
 **One finding is neither a match nor a mismatch.** The covariate-adjusted list experiment estimate is a nonlinear least squares fit, and it fails outright on `r nls_diagnostics$replicates_with_no_adjusted_estimate` of the `r format(nls_diagnostics$replicates, big.mark = ",")` bootstrap replicates. The deposited script and the rewrite handle those failures identically, by dropping them, so the adjusted intervals in the published Figure 1 and Table A1 rest on roughly half the replicates the deposit's own comment names. Nothing in the comparison table shows this, because both sides agree; it is visible only by counting.
 
@@ -214,7 +231,7 @@ Coppock (2017) asks whether the 2016 polling miss can be explained by Trump supp
 
 It recovers less. The direct question puts Trump support at `r pct(text_value("direct_share_trump"))`%; the list experiment puts it at `r pct(text_value("list_ate"))`%. The article then looks for subgroups in which the two modes diverge, across party identification, education, income, gender, race and modeled vote propensity, unadjusted and covariate adjusted. Of `r text_value("n_subgroups_compared")` subgroups, `r text_value("adjusted_differences_excluding_zero")` adjusted difference excludes zero. The article reports a combined estimator from Aronow, Coppock, Crawford and Green (2015) and the joint test of its assumptions, which the data fail.
 
-The published quantities are Table 2 (the distribution of list responses), Figure 1 (the subgroup comparison), Appendix Table A1 (the same estimates as a table), and `r sum(gt$table_figure == "In-text")` statements of a quantity in the running text, several of which restate the same number in a different section. Table 1 is the wording of the two lists and carries no numbers, so it has no ground-truth row. Figure 1 plots exactly the estimates Table A1 prints, so the two share their rows.
+The published quantities are Table 2 (the distribution of list responses), Figure 1 (the subgroup comparison), Appendix Table A1 (the same estimates as a table), and `r sum(gt$block == "In-text")` statements of a quantity in the running text, several of which restate the same number in a different section. Table 1 is the wording of the two lists and carries no numbers, so it has no ground-truth row. Figure 1 plots exactly the estimates Table A1 prints, so the two share their rows.
 
 # Original archive reproducibility
 
@@ -284,15 +301,31 @@ Three of the four runs use a scratch copy holding the deposited script and the d
 Each run also records, by modification time, which deposited files it wrote over. That is the measurement behind the rule against running an archive in place, and here it comes back empty: the deposited script writes nothing at all, so running it in place would have damaged nothing. That is a fact about this deposit and not a general one, and it is cheap enough to measure on every run.
 
 ```{r archive_runs_table}
+# What each pass left behind or wrote over, one line per pass, so each run can be
+# shown beside the pass it belongs to.
+pass_files <- archive_status |>
+  select(pass, outcome) |>
+  left_join(
+    archive_overwrites |>
+      summarize(
+        added = str_c(file[effect == "added"], collapse = "; "),
+        overwritten = str_c(file[effect == "overwritten"], collapse = "; "),
+        .by = pass
+      ),
+    by = "pass"
+  )
+
 archive_runs |>
+  left_join(pass_files, by = "pass") |>
   transmute(
     Run = run_id,
     Replicates = format(sims, big.mark = ","),
     Sampler = if_else(sampler == "rounding", "Pre-3.6.0", "Current"),
-    Inputs = inputs,
-    Status = status,
-    `Files left behind` = stray_files_written,
-    `Deposited files overwritten` = replace_na(deposited_files_overwritten, "none")
+    Inputs = if_else(pass == "stripped", "code and data only", "as shipped"),
+    Status = if_else(outcome == "clean", "completed", outcome),
+    `Files left behind` = replace_na(added, ""),
+    `Deposited files overwritten` = if_else(is.na(overwritten) | overwritten == "",
+                                            "none", overwritten)
   ) |>
   kable(booktabs = TRUE, align = c("l", "r", "l", "l", "l", "l", "l")) |>
   latex_only(\(k) kable_styling(k, latex_options = c("hold_position", "scale_down"),
@@ -353,7 +386,7 @@ second_direct <- figure_1 |>
 
 **What does not change.** No estimate is wrong, no standard error is wrong, and no conclusion in the article turns on it. The article's claim about income is that "different income groups did not diverge wildly in their support," which is as true of the correctly labeled rows as of the rotated ones. What changes is which five-row block of numbers belongs to which quintile.
 
-The maintained rewrite prints the labels the data supports. Those `r nrow(errata_rows)` ground-truth rows therefore carry `match_rewrite = 0` with a note recording that the disagreement is intentional.
+The maintained rewrite prints the labels the data supports. Those `r nrow(errata_rows)` ground-truth rows therefore carry `match_rewrite = FALSE` with a note recording that the disagreement is intentional.
 
 # What counts as a claim
 
@@ -392,11 +425,11 @@ gt |>
     Claims = n(),
     `Archive checked` = sum(!is.na(match)),
     `Archive matches` = sum(match == 1, na.rm = TRUE),
-    `Rewrite checked` = sum(!is.na(match_rewrite)),
-    `Rewrite matches` = sum(match_rewrite == 1, na.rm = TRUE),
-    .by = table_figure
+    `Rewrite checked` = sum(!is.na(rewrite_verdict)),
+    `Rewrite matches` = sum(rewrite_verdict == 1, na.rm = TRUE),
+    .by = block
   ) |>
-  rename(Block = table_figure) |>
+  rename(Block = block) |>
   kable(booktabs = TRUE, align = c("l", rep("r", 5))) |>
   latex_only(\(k) kable_styling(k, latex_options = "hold_position", font_size = 9))
 ```
@@ -405,9 +438,9 @@ Splitting the checked claims by whether they are point estimates or bootstrap st
 
 ```{r gt_by_kind}
 gt |>
-  filter(!is.na(match_rewrite)) |>
+  filter(!is.na(rewrite_verdict)) |>
   mutate(kind = case_when(
-    table_figure == "Descriptive" ~ "Claims about shape, sign and count",
+    block == "Descriptive" ~ "Claims about shape, sign and count",
     str_detect(claim, "standard error \\(pp\\)$") | str_detect(claim, "^SE of") ~
       "Bootstrap standard errors",
     .default = "Point estimates and counts"
@@ -415,7 +448,7 @@ gt |>
   summarize(
     Claims = n(),
     `Archive matches` = sum(match == 1, na.rm = TRUE),
-    `Rewrite matches` = sum(match_rewrite == 1, na.rm = TRUE),
+    `Rewrite matches` = sum(rewrite_verdict == 1, na.rm = TRUE),
     .by = kind
   ) |>
   rename(Kind = kind) |>
@@ -450,12 +483,12 @@ Every in-text quantity the article states is listed below with the value the rew
 
 ```{r in_text_table}
 gt |>
-  filter(table_figure == "In-text") |>
+  filter(block == "In-text") |>
   transmute(
     Claim = claim,
     Published = value_paper,
     Rewrite = trim_num(value_rewrite),
-    Match = case_when(match_rewrite == 1 ~ "yes", match_rewrite == 0 ~ "no", .default = "")
+    Match = case_when(rewrite_verdict == 1 ~ "yes", rewrite_verdict == 0 ~ "no", .default = "")
   ) |>
   kable(booktabs = TRUE, align = c("l", "r", "r", "c")) |>
   latex_only(\(k) kable_styling(k, latex_options = "hold_position", font_size = 8))
@@ -467,7 +500,7 @@ Every claim the article makes about the shape of its own estimates follows, with
 descriptive_rows |>
   transmute(
     Claim = claim,
-    Holds = case_when(match_rewrite == 1 ~ "yes", match_rewrite == 0 ~ "no",
+    Holds = case_when(rewrite_verdict == 1 ~ "yes", rewrite_verdict == 0 ~ "no",
                       .default = "no threshold stated"),
     Evidence = notes
   ) |>
@@ -614,15 +647,15 @@ The reduced replicate count is a property of the published analysis, not of the 
 
 ```{r rewrite_verification}
 gt |>
-  filter(table_figure == "Figure 1 and Table A1", str_detect(claim, ", (estimate|standard error) \\(pp\\)$")) |>
+  filter(block == "Figure 1 and Table A1", str_detect(claim, ", (estimate|standard error) \\(pp\\)$")) |>
   mutate(
     estimator = str_remove(str_remove(claim, "^.*: "), ", (estimate|standard error) \\(pp\\)$"),
     quantity = if_else(str_detect(claim, "standard error"), "Standard errors", "Point estimates")
   ) |>
   summarize(
     Cells = n(),
-    `Match published` = sum(match_rewrite == 1),
-    `Errata rows` = sum(match_rewrite == 0 & defect_locus == "archive" & str_detect(notes, "^Errata")),
+    `Match published` = sum(rewrite_verdict == 1),
+    `Errata rows` = sum(rewrite_verdict == 0 & defect_locus == "archive" & str_detect(notes, "^Errata")),
     .by = c(quantity, estimator)
   ) |>
   arrange(quantity, estimator) |>
